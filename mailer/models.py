@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+import uuid
 
 # Create your models here.
 
@@ -11,8 +12,22 @@ class Groups(models.Model):
         verbose_name = "All Groups List"
         verbose_name_plural = "All Groups List" 
 
+
+    
+
+
+class Excel_file(models.Model):
+    group_name = models.ForeignKey(Groups,on_delete=models.CASCADE)
+    gid = models.UUIDField(
+         primary_key = True,
+         default = uuid.uuid4,
+         editable = False)
+    file= models.FileField(upload_to='excel_file/')
+    date = models.DateField(auto_now=True)
+
 class userinfo(models.Model):
     created = models.DateTimeField(auto_now_add=True)
+    gid = models.ForeignKey(Excel_file,on_delete=models.CASCADE)
     group_name = models.ForeignKey(Groups,on_delete=models.CASCADE)    
     name =models.CharField(max_length=25)
     sname = models.CharField(max_length=25)
@@ -25,14 +40,7 @@ class userinfo(models.Model):
     class Meta:
         verbose_name = "All Users"
         verbose_name_plural = "All Users" 
-    
-
-
-class Excel_file(models.Model):
-    group_name = models.ForeignKey(Groups,on_delete=models.CASCADE)
-    file= models.FileField(upload_to='excel_file/')
-    date = models.DateField(auto_now=True)
-
+        
 class EMail_container(models.Model):
     group_name=models.ForeignKey(Groups,on_delete=models.CASCADE)
     subject =models.TextField()

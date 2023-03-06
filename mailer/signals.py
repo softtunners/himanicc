@@ -10,20 +10,31 @@ from django.shortcuts import get_object_or_404
 def extract_data(sender,instance,created,**kwargs):
     # instance.save()
     file = instance.file
+    try:
+        df = pd.read_excel(f'media/{file}')
+    except:
+         pass
     
-    df = pd.read_excel(f'media/{file}')
+    try:
+        df = pd.read_csv(f'media/{file}')
+    except:
+         pass
+    
 
     print(df.head(0))
     for i in range(len(df)):
-        user = userinfo.objects.create(group_name=instance.group_name,name=df['Name'][i],sname=df['Surname'][i],email = df['Email ID'][i],website=df['Website'][i],company_name=df['Company name'][i],business_details=df['Business Details'][i],phone_no = df['Mobile no'][i])
+        gid_value = instance.gid
+        excel_file_instance = Excel_file.objects.get(gid=gid_value)
+        user = userinfo.objects.create(gid=excel_file_instance, group_name=instance.group_name, name=df['Name'][i], sname=df['Surname'][i], email=df['Email'][i], website=df['Website'][i], company_name=df['Company Name'][i], business_details=df['Business Details'][i], phone_no=df['Phone No'][i])
         user.save()
+
 @receiver(post_save, sender=userinfo)
 def send_email_to_new_user(sender, instance, created, **kwargs):
     if not instance.mail_sent:
             # Render email template
             # Send email using SMTP server
             mail_content = get_object_or_404(EMail_container,group_name=instance.group_name)
-            print(mail_content)
+            print(mail_content,instance.email)
             subject = mail_content.subject
             from_email = 'hrithikhadawale73@gmail.com'
             html_message = mail_content.message
