@@ -1,0 +1,887 @@
+{% include 'html/base.html' %} {% block content %} {%block head %}
+<title>Himani's CC || Home</title>{% endblock head %}
+<style>
+    .row {
+        margin-right: 0!important
+    }
+    
+    .gradient-x-overlay-lg-navy::before {
+        background-image: linear-gradient(to right, #007cb6b6 0, #0e2433b0 100%);
+        background-repeat: repeat-x
+    }
+    
+    .slick-banner {
+        top: 40%
+    }
+    
+    .index-c-pext-primary {
+        font-size: 26px!important
+    }
+    
+    .logo-clients {
+        width: 130px!important
+    }
+    
+    .test-section {
+        display: flex;
+        justify-content: center
+    }
+    
+    .w-70 {
+        width: 70%
+    }
+    
+    .glass-morphisam {
+        background: rgba(255, 255, 255, .273);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .05);
+        backdrop-filter: blur( 20px);
+        -webkit-backdrop-filter: blur( 20px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, .18)
+    }
+    
+    .counter-section {
+        width: 90%!important
+    }
+    
+    .test-sec-70 {
+        width: 90%!important
+    }
+    
+    .blog-img {
+        width: 100%;
+        height: 180px
+    }
+    
+    .Himani-Bg-2 {
+        background-color: #457ab3
+    }
+    
+    @media (maxx-width:552px) {
+        .service-h2 {
+            font-size: 17px
+        }
+    }
+    
+    @media(max-width:552px) {
+        .test-sec-70 {
+            width: 95%!important
+        }
+        .counter-section {
+            width: 90%!important
+        }
+        .blog-img {
+            width: 100%;
+            height: 180px
+        }
+        .service-h2 {
+            font-size: 14px
+        }
+        .container-mb {
+            padding: 0
+        }
+        .sub-heading {
+            font-size: 16px!important
+        }
+    }
+    
+    .testi-box {
+        width: 70%;
+        margin: 20px;
+        border-radius: 0!important;
+        border: 2px solid #457ab326
+    }
+    
+    .slick-counter-current,
+    .slick-counter-divider,
+    .slick-counter-total {
+        color: #457ab3
+    }
+    
+    .Svg-test {
+        width: 100%;
+        position: absolute;
+        bottom: 0
+    }
+</style>
+<div id=frame-1>
+    <div class="js-slick-carousel slick slick-equal-height" data-hs-slick-carousel-options='{
+    "infinite": true,
+    "autoplay": true,
+    "autoplaySpeed": 5000,
+    "dots": true,
+    "dotsClass": "slick-pagination slick-pagination-white slick-pagination-vertical position-absolute bottom-0 right-0 mb-3 mr-3 slick-banner"
+  }'>
+        <div class="js-slide align-items-center bg-img-hero space-3" style=height:80vh;background-image:url(/assets/img/Home/Other/p1.jpg)>
+            <div class="container align-items-lg-center d-lg-flex">
+                <article class="text-center w-lg-60 mx-lg-auto"><span class="d-block mb-2" data-hs-slick-carousel-animation=fadeInUp><a class="d-block mb-2 font-weight-bold small text-cap text-white"style=font-size:40px><i class="fas fa-search"></i></a></span>
+                    <h2 class="mb-2 text-white" data-hs-slick-carousel-animation=fadeInUp
+                        data-hs-slick-carousel-animation-delay=150>Market Research</h2>
+                    <p class="description-2 text-white">We gauge the feasibility of a new product or service, through research conducted directly with potential consumers.</p><a class="btn btn-primary bordered-element-light btn-wide" href="{% url 'services'%}" data-hs-slick-carousel-animation=fadeInUp
+                        data-hs-slick-carousel-animation-delay=200>Read More <i class="fas fa-angle-right ml-1 fa-sm"></i></a></article>
+            </div>
+        </div>
+        <div class="js-slide align-items-center bg-img-hero space-3" style=background-image:url(/assets/img/Home/Banner/background-home.jpg)>
+            <div class="container align-items-lg-center d-lg-flex">
+                <article class="text-center w-lg-60 mx-lg-auto"><span class=d-block data-hs-slick-carousel-animation=fadeInUp><a class="d-block font-weight-bold small text-cap text-white"href=# style=font-size:40px><i class="fas fa-chart-bar"></i></a></span>
+                    <h2 class="mb-2 text-white h1" data-hs-slick-carousel-animation=fadeInUp
+                        data-hs-slick-carousel-animation-delay=150>Strategic Consulting</h2>
+                    <p class=description-2>There are four basic Brand Communication Growth Strategies, you can employ to expand your business: 1.Market Penetration, 2.Product Development, 3.Market Expansion and 4.Diversification.</p><a class="btn btn-primary bordered-element-light btn-wide"
+                        href="{% url 'services'%}" data-hs-slick-carousel-animation=fadeInUp data-hs-slick-carousel-animation-delay=200>Read More <i class="fas fa-angle-right ml-1 fa-sm"></i></a></article>
+            </div>
+        </div>
+        <div class="js-slide align-items-center bg-img-hero space-3" style=background-image:url(/assets/img/Home/Banner/background-ser.jpg)>
+            <div class="container align-items-lg-center d-lg-flex">
+                <article class="text-center w-lg-60 mx-lg-auto"><span class="d-block mb-2" data-hs-slick-carousel-animation=fadeInUp><a class="d-block mb-2 font-weight-bold small text-cap text-white"style=font-size:40px><i class="fas fa-paper-plane"></i></a></span>
+                    <h2 class="mb-2 text-white h1" data-hs-slick-carousel-animation=fadeInUp
+                        data-hs-slick-carousel-animation-delay=150>Sales Growth</h2>
+                    <p class=description-2>We’ve been focusing on sales growth, whereas many campaigns are aimed at increasing sales leads with the sales staff responsible for the conversion.</p><a class="btn btn-primary bordered-element-light btn-wide" href="{% url 'services'%}"
+                        data-hs-slick-carousel-animation=fadeInUp data-hs-slick-carousel-animation-delay=200>Read More <i class="fas fa-angle-right ml-1 fa-sm"></i></a></article>
+            </div>
+        </div>
+        <div class="js-slide align-items-center bg-img-hero space-3" style=background-image:url(/assets/img/Home/Banner/background-wwa.jpg)>
+            <div class="container align-items-lg-center d-lg-flex">
+                <article class="text-center w-lg-60 mx-lg-auto"><span class="d-block mb-2" data-hs-slick-carousel-animation=fadeInUp><a class="d-block mb-2 font-weight-bold small text-cap text-white"style=font-size:40px><i class="fas fa-compass"></i></a></span>
+                    <h2 class="mb-2 text-white h1" data-hs-slick-carousel-animation=fadeInUp
+                        data-hs-slick-carousel-animation-delay=150>Brand Strategies</h2>
+                    <p class=description-2>Effective Communication Strategies Take Time Because there are so many facets of effective brand communication, it can take a lot of time.</p><a class="btn btn-primary bordered-element-light btn-wide" href="{% url 'services'%}" data-hs-slick-carousel-animation=fadeInUp
+                        data-hs-slick-carousel-animation-delay=200>Read More <i class="fas fa-angle-right ml-1 fa-sm"></i></a></article>
+            </div>
+        </div>
+        <div class="js-slide align-items-center bg-img-hero space-3" style=background-image:url(/assets/img/Home/Banner/background-wwa.jpg)>
+            <div class="container align-items-lg-center d-lg-flex">
+                <article class="text-center w-lg-60 mx-lg-auto"><span class="d-block mb-2" data-hs-slick-carousel-animation=fadeInUp><a class="d-block mb-2 font-weight-bold small text-cap text-white"style=font-size:40px><i class="fas fa-mars-stroke"></i></a></span>
+                    <h2 class="mb-2 text-white h1" data-hs-slick-carousel-animation=fadeInUp
+                        data-hs-slick-carousel-animation-delay=150>Brand Awareness</h2>
+                    <p class=description-2>Brand awareness is the extent to which customers are able to recall or recognize a brand under different conditions. Brand awareness is one of two dimensions from brand knowledge, an associative network memory model.</p><a class="btn btn-primary bordered-element-light btn-wide"
+                        href="{% url 'services'%}" data-hs-slick-carousel-animation=fadeInUp data-hs-slick-carousel-animation-delay=200>Read More <i class="fas fa-angle-right ml-1 fa-sm"></i></a></article>
+            </div>
+        </div>
+        <div class="js-slide align-items-center bg-img-hero space-3" style=background-image:url(/assets/img/Home/Banner/background-wwa.jpg)>
+            <div class="container align-items-lg-center d-lg-flex">
+                <article class="text-center w-lg-60 mx-lg-auto"><span class="d-block mb-2" data-hs-slick-carousel-animation=fadeInUp><a class="d-block mb-2 font-weight-bold small text-cap text-white"style=font-size:40px><i class="fas fa-magnet"></i></a></span>
+                    <h2 class="mb-2 text-white h1" data-hs-slick-carousel-animation=fadeInUp
+                        data-hs-slick-carousel-animation-delay=150>Go 2 Market Strategy</h2>
+                    <p class=description-2>The plan of an organization, utilizing their outside resources, to deliver their unique value proposition to customers and achieve competitive advantage. The end goal is to target B2B | B2C | D2C market by ATL and BTL marketing.</p>
+                    <a
+                        class="btn btn-primary bordered-element-light btn-wide" href="{% url 'services'%}" data-hs-slick-carousel-animation=fadeInUp data-hs-slick-carousel-animation-delay=200>Read More <i class="fas fa-angle-right ml-1 fa-sm"></i></a>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center counter-section-main w-100">
+    <div class="counter-section bg-navy rounded">
+        <div class="row space-bottom-1 space-top-1" style=margin-left:15px>
+            <div class=col-md-10>
+                <div class="row justify-content-lg-center">
+                    <div class="col-6 col-md-2 index-counter-ot">
+                        <div class="align-items-center justify-content-center d-flex index-counter mb-md-0"><a class="d-block text-center" href=#><span class="d-block h3 index-c-pext-primary text-black">2200+</span><p class="h5 index-c-p text-black text-body">Happy Clients</p></a></div>
+                    </div>
+                    <div class="col-6 col-md-2 index-counter-ot">
+                        <div class="align-items-center justify-content-center d-flex index-counter mb-md-0"><a class="d-block text-center" href=#><span class="d-block h3 index-c-pext-primary text-black">4+</span><p class="h5 index-c-p text-black text-body">Countries Services</p></a></div>
+                    </div>
+                    <div class="col-6 col-md-2 index-counter-ot">
+                        <div class="align-items-center justify-content-center d-flex index-counter mb-md-0"><a class="d-block text-center" href=#><span class="d-block h3 index-c-pext-primary text-black">10+</span><p class="h5 index-c-p text-black text-body">State Services</p></a></div>
+                    </div>
+                    <div class="col-6 col-md-2 index-counter-ot">
+                        <div class="align-items-center justify-content-center d-flex index-counter mb-md-0"><a class="d-block text-center" href=#><span class="d-block h3 index-c-pext-primary text-black">6+</span><p class="h5 index-c-p text-black text-body">Years In Entrepreneurship</p></a></div>
+                    </div>
+                    <div class="col-6 col-md-2 index-counter-ot">
+                        <div class="align-items-center justify-content-center d-flex index-counter mb-md-0"><a class="d-block text-center" href=#><span class="d-block h3 index-c-pext-primary text-black">22+</span><p class="h5 index-c-p text-black text-body">Years Self Work Experience</p></a></div>
+                    </div>
+                    <div class="col-6 col-md-2 index-counter-ot">
+                        <div class="align-items-center justify-content-center d-flex index-counter mb-md-0"><a class="d-block text-center" href=#><span class="d-block h3 index-c-pext-primary text-black">5+</span><p class="h5 index-c-p text-black text-body">Crore Total Turnover</p></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 visits-counter" style=padding-right:10px;padding-left:0>
+                <div class="align-items-center justify-content-center d-flex bg-white rounded visits-c-2" style=height:105px><a class="d-block text-center p-2" href=#><span class="d-block h3">300+</span><p class="text-black index-c-p h6">Website Visitors</p></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id=frame-2>
+    <div class="container space-bottom-1 space-top-0">
+        <div class="text-center w-lg-60 mb-4 mb-md-9 mx-md-auto p-3 w-md-80">
+            <h2 class=h1>Our Services</h2><span class="d-block mb-2 sub-heading">We can tailor Smart Solutions for Your business.</span></div>
+        <div class="container container-mb">
+            <div class=row style=margin:0>
+                <div class="col-6 col-lg-4 mb-5 p-0">
+                    <a class="card h-100 transition-3d-hover card-hover-shadow overflow-hidden" href="{% url 'services'%}" style=border:0!important>
+                        <div class="align-items-center row" style=padding:0!important>
+                            <div class="col-12 col-md-12">
+                                <div class="pl-4 py-4 p-r-0">
+                                    <h2 class="h2 service-h2">Digital Marketing Strategy</h2><span class="font-weight-bold font-size-1">Read More <i class="fas fa-angle-right ml-1 fa-sm"></i></span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 mb-5 p-0">
+                    <a class="card h-100 transition-3d-hover card-hover-shadow overflow-hidden" href="{% url 'services'%}" style=border:0!important>
+                        <div class="align-items-center row">
+                            <div class="col-12 col-md-12">
+                                <div class="pl-4 py-4">
+                                    <h2 class="h2 service-h2">Brand Design & Awareness</h2><span class="font-weight-bold font-size-1">Learn More <i class="fas fa-angle-right ml-1 fa-sm"></i></span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 mb-5 p-0">
+                    <a class="card h-100 transition-3d-hover card-hover-shadow overflow-hidden" href="{% url 'services'%}" style=border:0!important>
+                        <div class="align-items-center row">
+                            <div class="col-12 col-md-12">
+                                <div class="pl-4 py-4">
+                                    <h2 class="h2 service-h2">Brand Marketing Strategy</h2><span class="font-weight-bold font-size-1">Learn More <i class="fas fa-angle-right ml-1 fa-sm"></i></span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 mb-5 p-0">
+                    <a class="card h-100 transition-3d-hover card-hover-shadow overflow-hidden bordered-element-light" href="{% url 'services'%}" style=border:0!important>
+                        <div class="align-items-center row">
+                            <div class="col-12 col-md-12">
+                                <div class="pl-4 py-4">
+                                    <h2 class="h2 service-h2">Brand Building Strategy</h2><span class="font-weight-bold font-size-1">Learn More <i class="fas fa-angle-right ml-1 fa-sm"></i></span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 mb-5 p-0">
+                    <a class="card h-100 transition-3d-hover card-hover-shadow overflow-hidden" href="{% url 'services'%}" style=border:0!important>
+                        <div class="align-items-center row">
+                            <div class="col-12 col-md-12">
+                                <div class="pl-4 py-4">
+                                    <h2 class="h2 service-h2">Website Design & Development</h2><span class="font-weight-bold font-size-1">Learn More <i class="fas fa-angle-right ml-1 fa-sm"></i></span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 mb-5 p-0">
+                    <a class="card h-100 transition-3d-hover card-hover-shadow overflow-hidden" href="{% url 'services'%}" style=border:0!important>
+                        <div class="align-items-center row">
+                            <div class="col-12 col-md-12">
+                                <div class="pl-4 py-4">
+                                    <h2 class="h2 service-h2">Advertising Commercial</h2><span class="font-weight-bold font-size-1">Learn More <i class="fas fa-angle-right ml-1 fa-sm"></i></span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class=text-center>
+            <div class=mt-5><a class="mb-2 btn mx-1 bordered-element-light btn-primary btn-wide" href="{% url 'services'%}">Check More </a><a class="mb-2 btn mx-1" href=#modal1 data-toggle=modal1 data-target=#exampleModalIndex>Let's Talk <i class="fas fa-angle-right ml-1 fa-sm"></i></a></div>
+        </div>
+    </div>
+</div>
+<div class=Growth-Partners-Section id=frame-3>
+    <div class=space-2>
+        <div class="text-center mx-md-auto w-md-80 mb-6">
+            <h2 class=h1>Our Growth Partners Are</h2>
+            <p class="pl-4 content-client mt-3 pr-4 sub-heading">Retailers | Health Cares | Manufactures | Real Estates | Car & Automobiles | Jewellery | Education | Resort & Hotel | Travel & Tourism | Medical | Tiles | Plywood | Luggage | Painting Solution | Security Seals | Manpower | and more...</div>
+        <div
+            class="align-items-center justify-content-center">
+            <div class="js-slick-carousel slick" data-hs-slick-carousel-options='{
+   "slidesToShow": 10,
+   "autoplay": true,
+   "autoplaySpeed": 2500,
+   "variableWidth": true,
+   "infinite": true,
+   "responsive": [{
+    "breakpoint": 992,
+      "settings": {
+        "slidesToShow": 4
+      }
+    }, {
+    "breakpoint": 768,
+    "settings": {
+      "slidesToShow": 2
+    }
+  }]
+   }'>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/asian-paints.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/Asian-wood.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/Creestaa_logo.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/FPA.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/Hidesign.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide mb-sm-0"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/Iball.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide mb-sm-0"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/Keys-Hotels.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide mb-sm-0"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/KMS.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/Lodha-Palava.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/MadhavBaug.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/MaratheJewellers.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/Nitco.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/sanyukt.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/satvik.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide mb-sm-0"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/Sepio.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide mb-sm-0"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/Swastik.png alt="Image Description"></div>
+                </div>
+                <div class="js-slide mb-0 ml-3">
+                    <div class="col-sm-2 col-4 clients-logo-slide mb-sm-0"><img class="mx-auto logo-clients" src=/assets/img/Home/Clients/vibrant.png alt="Image Description"></div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+<div class=test-section-main id=frame-4>
+    <div class=mb-test>
+        <div class="h-100 card-body p-0 p-md-4" style=border:0>
+            <div class=row style=display:flex;justify-content:center>
+                <div class=w-80 style=padding-right:0>
+                    <div class="mb-5 mb-md-9 mx-md-auto">
+                        <h2 class=h1>What Our Clients Say</h2>
+                        <p class=sub-heading>Our reputation is just as important as yours.</div>
+                    <div class=Slider-test>
+                        <div class="js-slick-carousel slick" data-hs-slick-carousel-options='{"dots": true, 
+                "infinite" : true, 
+                "centerMode": true,
+                "centerPadding": "150px",
+                "autoplay" : true, 
+                "autoplaySpeed": 5000,
+                "counterSelector": "#slickCounter",
+                "counterDivider": "/",
+                "counterClassMap": { "current": "slick-counter-current", "total": "slick-counter-total", "divider": "slick-counter-divider"},
+                "dotsClass": "slick-pagination"
+            }'>
+                            <div class="js-slide card testi-box" style="background:url('/assets/img/blob-scatter-haikei\ \(1\).svg') no-repeat">
+                                <div class=mb-3>
+                                    <div class=p-5>
+                                        <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">Mr. Prashant is very agile and creative in its work. Field itself demands it which is curated by him in very apt manner. Designing of Creatives are invariably unique and with message which connects well. SHARP Understanding
+                                            of clients need and his approach circumvent the competitor. Prompt Service with constant touch with trending concepts makes CLIENT HAPPY So strongly recommend him to be part of Brand and enhance brand by his
+                                            voice for brand.</blockquote>
+                                        <div class=media>
+                                            <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>CA Shrenik Shah </span><span class="test-quote font-size-1">-- SundayInk</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-slide card testi-box">
+                                <div class=mb-3>
+                                    <div class=p-5>
+                                        <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">I am very impressed with the thought process while designing and creating branding for Optima Knowledge Ventures. A deep understanding of client needs, coupled with the aesthetics and psychology of colours used
+                                            are impressions in our minds. We wish you all the very best!</blockquote>
+                                        <div class=media>
+                                            <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Narendra Deshmukh </span><span class="test-quote font-size-1">-- Director at Optima Knowledge Ventures</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-slide card testi-box">
+                                <div class=mb-3>
+                                    <div class=p-5>
+                                        <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">Prashant is very polite and humble person. He is very skilled in his field of designing unique brand identity for SME's in various fields. He listens patiently and then does fantastic and spectacular work of delivering
+                                            the scope according to client needs. I would highly recommend him.</blockquote>
+                                        <div class=media>
+                                            <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>CA Abhishek Ganeriwala </span><span class="test-quote font-size-1">-- Director Arun Gupta Advisory</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-slide card testi-box">
+                                <div class=mb-3>
+                                    <div class=p-5>
+                                        <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">Good art work and understanding of client requirements. Good after sales service as well as support. Happy to recommend their services.</blockquote>
+                                        <div class=media>
+                                            <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Devi Prasad Amin - </span><span class="test-quote font-size-1">-- Founder & Director | Brick Stone Realtors</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-slide card testi-box">
+                                <div class=mb-3>
+                                    <div class=p-5>
+                                        <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">I had the absolute pleasure of working with HimaniCC in one of my product launches, who helped us to design our banners, standees, and distribution materials. Prashant is an awesome guy with simple but effective
+                                            thought process. Not only did Prashant showed excellent initiative in designing the artwork from scratch, but his also played a huge role in the launch of our product from a design perspective. Prashant's attention
+                                            to detail and general UI creativity made a huge impact as a whole.<br>All in all, Prashant & his team are rock stars and it will be great helping hand for any organization who is looking for someone who can
+                                            help them in the area of advertisement, promotion & marketing.</blockquote>
+                                        <div class=media>
+                                            <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Tarun Bangera </span><span class="test-quote font-size-1">-- Head Data Science & Analytics | CARE Ratings Ltd</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-slide card testi-box">
+                                <div class=mb-3>
+                                    <div class=p-5>
+                                        <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">One stop solution for all creatives. Best designing quality, effective pricing. it was a great experience working with them, so i would highly recommend Himani CC's services.</blockquote>
+                                        <div class=media>
+                                            <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Vishvesh Bhatt </span><span class="test-quote font-size-1">-- Assistant Manager | Sykes & Ray Edupro Pvt Ltd</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-slide card testi-box">
+                                <div class=mb-3>
+                                    <div class=p-5>
+                                        <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">Would happily & highly recommend Himani's CC for design & creatives. For us here at Sepio Products, Prashant has been a true professional who has gone the last mile to deliver customer satisfaction while making
+                                            sure every minute detail in our creatives & designwork, has been well taken care of. His nature & attitude have been an additional positive which has made our experience in working with him, an absolute pleasure.</blockquote>
+                                        <div
+                                            class=media>
+                                            <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Gagan Barmecha </span><span class="test-quote font-size-1">-- Sr Manager | Sepio Product Pvt Ltd</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-slide card testi-box">
+                            <div class=mb-3>
+                                <div class=p-5>
+                                    <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">I had a great experience dealing with Himani's Creative Communication. I had approached them to design a logo for my company "The Turnover Tribe". I wanted it to be simple & elegant, which is probably a difficult thing
+                                        to achieve :). What I liked is, Prashant was very patient in understanding the exact requirement and the message that I wanted the logo to communicate. And he encapsulated that beautifully in the logo. Efficient
+                                        with timelines & right pricing too! I would definitely approach them again for future requirements.</blockquote>
+                                    <div class=media>
+                                        <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Sanket Prabhu </span><span class="test-quote font-size-1">-- Vice President | Avendus Capital</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-slide card testi-box">
+                            <div class=mb-3>
+                                <div class=p-5>
+                                    <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">I had a great experience dealing with Himani's Creative Communication. I had approached them to design a logo for my company "The Turnover Tribe". I wanted it to be simple & elegant, which is probably a difficult thing
+                                        to achieve :). What I liked is, Prashant was very patient in understanding the exact requirement and the message that I wanted the logo to communicate. And he encapsulated that beautifully in the logo. Efficient
+                                        with timelines & right pricing too! I would definitely approach them again for future requirements.</blockquote>
+                                    <div class=media>
+                                        <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Sanket Prabhu </span><span class="test-quote font-size-1">-- Vice President | Avendus Capital</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-slide card testi-box">
+                            <div class=mb-3>
+                                <div class=p-5>
+                                    <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">I had a great experience dealing with Himani's Creative Communication. I had approached them to design a logo for my company "The Turnover Tribe". I wanted it to be simple & elegant, which is probably a difficult thing
+                                        to achieve :). What I liked is, Prashant was very patient in understanding the exact requirement and the message that I wanted the logo to communicate. And he encapsulated that beautifully in the logo. Efficient
+                                        with timelines & right pricing too! I would definitely approach them again for future requirements.</blockquote>
+                                    <div class=media>
+                                        <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Sanket Prabhu </span><span class="test-quote font-size-1">-- Vice President | Avendus Capital</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-slide card testi-box">
+                            <div class=mb-3>
+                                <div class=p-5>
+                                    <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">Really solid experience is what Prashant Chavan comes with .I would like to recommend him to all the exhibition and stall owners for all their publicity collaterals may it be Standee Design , stall creative design ,
+                                        Entrance , Logo , Hoardings etc . Best Wishes to the team</blockquote>
+                                    <div class=media>
+                                        <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Jesse J </span><span class="test-quote font-size-1">-- Director | BandEdge Talent Agency</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="js-slide card testi-box">
+                            <div class=mb-3>
+                                <div class=p-5>
+                                    <blockquote class="test-quote font-weight-normal h5 mb-4 text-justify">It was a pleasure to work with Mr Prashant Chavan from Himani’s Creative Communication LLP. He has an excellent sense of design that matches his communication and organisational skills. Prashant is always quick to develop
+                                        and execute project plans efficiently to ensure they follow the client’s vison. Prashant’s commitment to quality and perfection is the cornerstone to his success”. Highly recommended his design services.</blockquote>
+                                    <div
+                                        class=media>
+                                        <div class=media-body><span class="test-quote font-weight-bold h4" style=color:#000>Bhavin Kothari </span><span class="test-quote font-size-1">-- Director | M/s Estilo Tiles</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container position-relative" style=transform:translatey(-20px)>
+                <div class="counter-himani slick-counter" id=slickCounter></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class=z-index-999 id=frame-5>
+    <div style="box-shadow:4px -2px 20px 1px #d8d8d8">
+        <div class="bg-soft-light section" style=border:0!important>
+            <div class=container>
+                <div class="space-2 WCS-Content">
+                    <div>
+                        <h4 class=h1>Why Choose Us?</h4>
+                        <p class=sub-heading>Some Updated and Trendy Line shall be appear here</div>
+                    <p>We will make your brand identity emerge with colour, images and fonts that bring it to life. Your message will be clear, concise and easy to interpret. Our specialty is combining typography with custom illustration for visual impact.
+                        <p>Understanding the trends, consumer and brand context help us to develop innovative strategy that will address a rational and emotional demand. We work as your growth partners and commit Return on your (Marketing) Investment (ROI)!
+                            <ul
+                                class="m-0 p-0">
+                                <div class=row>
+                                    <div class=col-md-6>
+                                        <li class=about-main-list><i class="fas fa-check"></i><span class=about-list>Experienced design professionals :</span>team comprises qualified senior design professionals.
+                                            <li class=about-main-list><i class="fas fa-check"></i><span class=about-list>Your end goal and brand in mind : </span>We are committed to creating world class marketing pieces with your end goal and brand in mind.
+                                                <li class=about-main-list><i class="fas fa-check"></i><span class=about-list>Colour psychology : </span>To help you outsell your competition, our designers are trained in colour psychology and the dramatic effect it has on sales.
+                                                    <li
+                                                        class=about-main-list><i class="fas fa-check"></i><span class=about-list>No hidden cost surprises :</span>All designers are trained to work within budget to ensure no hidden surprises.</div>
+                                    <div class=col-md-6>
+                                        <li class=about-main-list><i class="fas fa-check"></i><span class=about-list>A Trans-Tasman alliance : </span>We have the benefit of two locations and two teams working together. This means we can keep you up-to-date on what’s happening
+                                            over the ditch and you’re on top of all current marketing trends.
+                                            <li class=about-main-list><i class="fas fa-check"></i><span class=about-list>Prompt, reliable and on time service : </span>You can always depend on us for fast, reliable, on time service. When we give you a delivery date, you can count
+                                                on it.
+                                                <li class=about-main-list><i class="fas fa-check"></i><span class=about-list>Research your industry : </span>To ensure the best possible results for your business, we will research your industry, trends and target market before commencing
+                                                    a project.</div>
+                                </div>
+                                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space-2 auto-init dzsparallaxer gradient-x-overlay-lg-navy height-is-based-on-content mode-scroll use-loading" data-options='{direction: "normal"}'>
+    <div class="divimage dzsparallaxer--target" style=margin-top:-50px;height:150%></div>
+    <div class="card container space-1 w-90">
+        <div class="text-center mx-md-auto mb-4 w-md-100">
+            <h2>What We Get</h2><span class="d-block mb-2 sub-heading">Amazing Services By "Himani’s CC".</span></div>
+        <div>
+            <div class=row style=margin:0>
+                <div class="col-sm-2 mb-sm-0 col-6 mb-3 px-2">
+                    <div class="text-center p-4">
+                        <figure class="mx-auto max-w-8rem w-100"><img class=img-fluid src=../../assets/svg/icons/icon-37.svg alt="SVG "></figure>
+                        <p class="font-size-1 mb-0 mt-3 p-0">Name of Icon</div>
+                </div>
+                <div class="col-sm-2 mb-sm-0 col-6 mb-3 px-2">
+                    <div class="text-center p-4">
+                        <figure class="mx-auto max-w-8rem w-100"><img class=img-fluid src=../../assets/svg/icons/icon-37.svg alt="SVG "></figure>
+                        <p class="font-size-1 mb-0 mt-3 p-0">Name of Icon</div>
+                </div>
+                <div class="col-sm-2 mb-sm-0 col-6 mb-3 px-2">
+                    <div class="text-center p-4">
+                        <figure class="mx-auto max-w-8rem w-100"><img class=img-fluid src=../../assets/svg/icons/icon-37.svg alt="SVG "></figure>
+                        <p class="font-size-1 mb-0 mt-3 p-0">Name of Icon</div>
+                </div>
+                <div class="col-sm-2 mb-sm-0 col-6 mb-3 px-2">
+                    <div class="text-center p-4">
+                        <figure class="mx-auto max-w-8rem w-100"><img class=img-fluid src=../../assets/svg/icons/icon-37.svg alt="SVG "></figure>
+                        <p class="font-size-1 mb-0 mt-3 p-0">Name of Icon</div>
+                </div>
+                <div class="col-sm-2 mb-sm-0 col-6 mb-3 px-2">
+                    <div class="text-center p-4">
+                        <figure class="mx-auto max-w-8rem w-100"><img class=img-fluid src=../../assets/svg/icons/icon-37.svg alt="SVG "></figure>
+                        <p class="font-size-1 mb-0 mt-3 p-0">Name of Icon</div>
+                </div>
+                <div class="col-sm-2 mb-sm-0 col-6 mb-3 px-2">
+                    <div class="text-center p-4">
+                        <figure class="mx-auto max-w-8rem w-100"><img class=img-fluid src=../../assets/svg/icons/icon-37.svg alt="SVG "></figure>
+                        <p class="font-size-1 mb-0 mt-3 p-0">Name of Icon</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=frame-6>
+    <div class="space-2 Team-Section">
+        <div class=container>
+            <div class="mx-md-auto shadow-none">
+                <h2 class="h1 m-0">Our Team - Lorem ipsum<br>dolor,</h2><span class="d-block mb-2 mt-3" style=font-size:16px>Lorem ipsum dolor sit amet consectetur adipisicing .</span></div>
+            <div class=content>
+                <div class=row>
+                    <div class=col-md-8>
+                        <p>Our Graphic Design team is here to help your company inform consumers about who you are and what you do. Whether it is through your brand or other visual assets, we are here to help. We encourage opinions and value creativity through
+                            listening to you. We strive to create an identity that will stand the test of time and be your own.
+                            <p>Designers have their own language. There are words that only we understand. The subtle language that quietly captures your customer’s attention with the creative use of colours, symbols and images.</div>
+                    <div class=col-md-4
+                        style=padding-right:0!important>
+                        <div class=team-profile>
+                            <div class="text-center card profile-card-4"><img class="img-fluid img-responsive" src=/assets/img/Team/Prashnat.png>
+                                <div class=profile-content>
+                                    <div class=profile-name>Prashant Chavan
+                                        <p>Founder & Brand Consultant</div>
+                                    <div class="row m-0 p-0 profile-card-row">
+                                        <div class="col-6 col-md-6 m-0 p-1"><a class="btn btn-soft-primary linkedin-p-btn" href=#><i class="fa-linkedin fab"></i><span class=link-span>Linkedin</span></a></div>
+                                        <div class="col-6 col-md-6 m-0 p-1"><a class="btn btn-primary profile-card-btn" href="{% url 'profiledetails' %}">View Profile</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=tab-list>
+                    <div>
+                        <ul class="mb-7 nav nav-segment scrollbar-horizontal" role=tablist style=border-radius:0>
+                            <li class=nav-item><a class="nav-link active" href=#pills-one-code-features-example1 style=border-radius:0 aria-controls=pills-one-code-features-example1 aria-selected=true data-toggle=pill id=pills-one-code-features-example1-tab role=tab>Our Skill</a>
+                                <li
+                                    class=nav-item><a class=nav-link href=#pills-two-code-features-example1 style=border-radius:0 aria-controls=pills-two-code-features-example1 aria-selected=false data-toggle=pill id=pills-two-code-features-example1-tab role=tab>Our Team</a>
+                                    <li
+                                        class=nav-item><a class=nav-link href=#pills-three-code-features-example1 style=border-radius:0 aria-controls=pills-three-code-features-example1 aria-selected=false data-toggle=pill id=pills-three-code-features-example1-tab role=tab>Core Team Members</a></ul>
+                    </div>
+                    <div class=tab-content>
+                        <div class="fade tab-pane active show" id=pills-one-code-features-example1 aria-labelledby=pills-one-code-features-example1-tab role=tabpanel>
+                            <h3 class=h3>Team Skill</h3>
+                            <p>Designer | Researchers | Media Planners | Digital Illustrator | Copywriter Collective we have more than 50+ year’s of experience as a one team.</div>
+                        <div class="fade tab-pane" id=pills-two-code-features-example1 aria-labelledby=pills-two-code-features-example1-tab
+                            role=tabpanel>
+                            <h3 class=h3>Our Strength</h3>
+                            <p>Creativity | Quick Thinking | Customer Focus | Innovation | Storytelling | Writing | Listening | Planning | Research | Analytical | Knowledge of media trends | Problem solving | Brand Strategy | Communication | Multitasking
+                                | Teamwork</div>
+                        <div class="fade tab-pane" id=pills-three-code-features-example1 aria-labelledby=pills-three-code-features-example1-tab role=tabpanel>
+                            <h3 class=h3>Our Team Mates</h3>
+                            <div>
+                                <div class=row>
+                                    <div class=col-md-6>
+                                        <div>
+                                            <div class="text-center card profile-card-4">
+                                                <div class=row>
+                                                    <div class=col-md-5><img class="img-fluid img-responsive" src=/assets/img/Team/Prashnat.png></div>
+                                                    <div class=col-md-7>
+                                                        <div class=profile-content>
+                                                            <div class="profile-info text-left">
+                                                                <h5>Ashwin Sevak</h5>
+                                                                <p>Front-End Development
+                                                                    <p>skilled in <b>JS | UI Development | ReactJS | DJango</b></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=col-md-6>
+                                        <div>
+                                            <div class="text-center card profile-card-4">
+                                                <div class=row>
+                                                    <div class=col-md-5><img class="img-fluid img-responsive" src=/assets/img/Team/Prashnat.png></div>
+                                                    <div class=col-md-7>
+                                                        <div class=profile-content>
+                                                            <div class="profile-info text-left">
+                                                                <h5>Hrithik Hadawale</h5>
+                                                                <p>Back-End Development
+                                                                    <p>skilled in <b>AI | Python | ML | DBMS</b></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .team-content-row {
+        color: #000;
+        margin-top: 30px
+    }
+    
+    .team-profile {
+        margin-top: -160px
+    }
+    
+    .linkedin-p-btn {
+        padding: 10px;
+        border-radius: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000
+    }
+    
+    .linkedin-p-btn i {
+        font-size: 20px
+    }
+    
+    .link-span {
+        font-size: 13px;
+        padding: 0 10px
+    }
+    
+    .profile-card-btn {
+        font-size: 13px;
+        padding: 10px;
+        border-radius: 0;
+        width: 100%
+    }
+    
+    .profile-card-row {
+        display: flex;
+        align-items: center
+    }
+    
+    .profile-card-4 {
+        max-width: 100%;
+        background-color: #fff;
+        overflow: hidden;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer
+    }
+    
+    .profile-card-4 img {
+        transition: all .25s linear
+    }
+    
+    .profile-card-4 .profile-content {
+        position: relative;
+        padding: 15px;
+        background-color: #fff
+    }
+    
+    .profile-card-4 .profile-name {
+        font-weight: 700;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -70px;
+        color: #fff;
+        font-size: 17px
+    }
+    
+    .profile-card-4 .profile-name p {
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 1.5px
+    }
+    
+    .profile-card-4 .profile-content::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        top: -10px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 0;
+        transform: skewY(3deg)
+    }
+    
+    .profile-card-4:hover img {
+        transform: rotate(5deg) scale(1.1, 1.1);
+        filter: brightness(110%)
+    }
+    
+    .ot-card {
+        padding: 10px
+    }
+    
+    @media(max-width:552px) {
+        .ot-card {
+            padding: 20px!important;
+            display: flex;
+            justify-content: center;
+            text-align: center
+        }
+        .team-profile {
+            margin-top: 0;
+            padding: 0
+        }
+        .team-content-row {
+            padding: 0 0 0 15px
+        }
+        .content {
+            font-size: 14px!important;
+            padding: 0
+        }
+    }
+</style>
+<div class="bg-light frame-8 space-top-2">
+    <div class="container last-section space-bottom-2">
+        <div class=row>
+            <div class=col-md-8>
+                <div class="mb-5 mb-md-9 mx-md-auto">
+                    <h2 class=h1>Recent Branding Stories</h2>
+                    <p>We've helped some great companies brand, design and get to market.</div>
+            </div>
+            <div class="d-flex col-md-4 justify-content-end">
+                <div class="text-center position-relative z-index-2">
+                    <div class="text-center bg-navy border bordered-element-light d-inline-block font-size-1 px-4 py-3 text-white">Want to read more? <a class="font-weight-bold text-white ml-3" href="{% url 'blogs' %}">Click Here <span class="fas fa-angle-right ml-1"></span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-n2 mb-5 mb-md-9">{% for blog in blogs %}
+            <div class="mb-3 px-2 col-lg-3 col-sm-6 mb-lg-0">
+                <a class="card h-100 transition-3d-hover" href="{% url 'blog' blog.title %}" style=border:0!important><img class=blog-img src=/media/{{blog.thumbnail}} alt="Image Description ">
+                    <div class=card-body><span class="d-block mb-2 font-weight-bold small text-cap">{{blog.category}}</span>
+                        <h5 class=mb-0>{{blog.title}}</h5>
+                    </div>
+                </a>
+            </div>{% endfor %}</div>
+    </div>
+</div>
+<div class="fade align-item-center bordered-element-light modal" id=exampleModalIndex aria-labelledby=exampleModalLabel role=dialog aria-hidden=true tabindex=-5>
+    <div class=modal-dialog role=document>
+        <div class=modal-content>
+            <div class=modal-header>
+                <h5 class=modal-title id=exampleModalLabel>Let's Connect</h5><button class="btn bordered-element-light btn-icon btn-soft-secondary btn-xs" type=button aria-label=Close data-dismiss=modal1><svg aria-hidden=true height=10 viewBox="0 0 18 18"width=10 xmlns="http://www.w3.org/2000/svg "><path d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1
+        c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z "fill="currentColor "/></svg></button></div>
+            <div class=modal-body>
+                <div>
+                    <div>
+                        <div class="d-block d-sm-flex media">
+                            <div class="media-body media-body-team">
+                                <form action="{% url 'home' %}" class=js-validates method="POST ">{% csrf_token %}
+                                    <div class="p-4 card-body p-md-7">
+                                        <div class=mb-4>
+                                            <h3>Fill out the form and we'll be in touch as soon as possible.</h3>
+                                        </div>
+                                        <div class="row mx-n2">
+                                            <div class="col-sm-6 px-2">
+                                                <div class="form-group js-form-message">{{contact.fname}}</div>
+                                            </div>
+                                            <div class="col-sm-6 px-2">
+                                                <div class="form-group js-form-message">{{contact.email}}</div>
+                                            </div>
+                                            <div class="col-sm-6 px-2">
+                                                <div class="form-group js-form-message">{{contact.number}}</div>
+                                            </div>
+                                            <div class="col-sm-6 px-2">
+                                                <div class="form-group js-form-message">{{contact.service}}</div>
+                                            </div>
+                                            <div class="col-sm-6 px-2">
+                                                <div class="form-group js-form-message">{{contact.website}}</div>
+                                            </div>
+                                            <div class="col-sm-12 px-2">
+                                                <div class="form-group js-form-message">{{contact.comment}}</div>
+                                            </div>
+                                        </div><button class="btn btn-primary btn-block" type="submit ">Get Quote</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).on("ready ", function() {
+        $(".js-slick-carousel ").each(function() {
+            $.HSCore.components.HSSlickCarousel.init($(this))
+        })
+    }), $(document).on("ready ", function() {
+        $(".js-counter ").each(function() {
+            new HSCounter($(this)).init()
+        })
+    })
+</script>{% endblock content %}

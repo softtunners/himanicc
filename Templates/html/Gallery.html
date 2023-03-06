@@ -1,0 +1,109 @@
+{% include 'html/base.html' %} {% block content %} {%block head %}
+<title>Himani'sCC || {{book.name}} </title>{% endblock head %}
+
+<style>
+   .go-back {
+        position: absolute!important;
+        left: 10px!important;
+        top: 60%!important;
+        padding: 0.625rem 1.125rem!important;
+        font-size: 0.875rem!important;
+        line-height: 1.5!important;
+        border-radius: 0rem!important;
+        color: white!important;
+        background-color: rgb(0 123 182)!important;
+        /* border-color: rgba(245, 245, 245, 0.925)!important; */
+        /* z-index: 999; */
+        font-weight: 900;
+    }
+</style>
+<a href="{% url 'scrapbook' %}" class="go-back "><i class="fas fa-chevron-left"></i>&nbsp;&nbsp; Go Back</a>
+
+
+<div class="bg-primary bg-img-hero banner-everywhere" style="background-image: url();">
+    <div class="container space-2 space-lg-3">
+        <div class="w-lg-65 text-center mx-lg-auto">
+            <span class="badge badge-soft-light bordered-element-light font-size-1 py-3 px-4 mb-3">Gallery</span>
+            <h1 class="text-white mb-0">{{book.name}}</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="counter-section-main-home d-flex justify-content-center w-100">
+
+    <div class="card bg-img-hero bg-navy text-white text-center p-4 my-4 rounded" style="background-image: url(../../media/svg/components/abstract-shapes-1.svg);">
+
+        <!-- Form -->
+        <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <h2 class="text-white mb-0 h3">Get Best of Our Services, Connect with us today</h2>
+            </div>
+
+            <div class="col-lg-5 text-lg-right">
+                <a class="btn btn-text-secondary btn-wide bordered-element-light mx-1 mb-2 text-white" href="tel:9769210723">Call us</a>
+                <a class="btn btn-light btn-wide bordered-element-light mx-1 mb-2" href="{% url 'contact' %}">Get Quote</a>
+            </div>
+        </div>
+        <!-- End Form -->
+    </div>
+</div>
+<style>
+    .images-wrapper {    
+        line-height: 0;       
+         -webkit-column-count: 5;    
+         -webkit-column-gap: 5px;    
+         -moz-column-count: 5;
+         -moz-column-gap: 5px;
+          column-count: 4;    
+          column-gap: 15px;    
+     }  
+     .images-wrapper img {    
+        width: 100% !important;  
+        height: auto !important; 
+        margin:10px;
+        border:1px solid black; 
+     }  
+     .images-wrapper{   
+        display:inline-block;    
+        margin-right: auto;    
+        margin-left: auto;  
+     }
+</style>
+<div class="container space-bottom-3">
+        <div id="fancyboxGallery4" class= 'images-wrapper'>
+         {% for i in img_gallery %}
+                        <a class="js-fancybox media-viewer" href="javascript:;" data-hs-fancybox-options='{"selector": "#fancyboxGallery4 .js-fancybox","speed": 700,"loop": true}' data-src="../../media/{{i.img}}" data-caption="">
+
+                        <img  src="../../media/{{i.img}}" alt="Image Description">
+                        <span class="media-viewer-container">
+                            <span class="media-viewer-icon bordered-element-light">
+                                <i class="fas fa-plus media-viewer-icon-inner"></i>
+                            </span>
+                        </span>
+
+                </a>
+
+
+     {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/assets/js/hs.fancybox.js"></script>
+<script>
+    $(document).on('ready', function() {
+        $('.js-fancybox').each(function() {
+            var fancybox = $.HSCore.components.HSFancyBox.init($(this));
+        });
+    });
+</script>
+
+
+{% endblock content %}

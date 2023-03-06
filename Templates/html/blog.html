@@ -1,0 +1,225 @@
+{% include 'html/base.html' %} {% block content %} {%block head %}
+<title>Himani'sCC || Blogs </title>{% endblock head %}
+
+
+<style>
+    .blog-img {
+        width: 100%;
+        height: 180px;
+    }
+    .btn-custom: hover{
+        background-color:black !important;
+
+    } 
+    .input-group{
+        margin: auto;
+
+    }
+  
+  
+    @media(max-width: 1200px){
+        .banner-custom{
+            height:55vh !important;
+            width:containt;
+        }
+        .containt-custom{
+            margin-top:-2%;
+        }
+    }
+    @media( min-width:400px, max-width:800px){
+        .banner-custom{
+            height: 45vh !important;
+            width:containt;
+        }
+        .containt-custom{
+            margin-top:-15%;
+        }
+        .blog-custom{
+            font-size: 22px !important;
+
+        }
+      
+    }
+    
+</style>
+
+
+
+<!-- Hero Section -->
+
+{% comment %} <div class="bg-primary bg-img-hero banner-everywhere banner-blog" style="background-image: url(/assets/img/contact/Blog.jpg);"> {% endcomment %}
+    <div class="js-slide  bg-img-hero space-3 align-items-center banner-custom" style="height: 80vh;opacity:1; background-image: url(/assets/img/contact/Blog.jpg);">
+
+    <div class=" container containt-custom">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="text-left mx-lg-auto">
+                    <h1 class="text mb-0">Read our latest Blogs</h1>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="">
+                    <div class="mb-3">
+                        <h3 class="text">Filter Search</h3>
+                    </div>
+                    <form action="{% url 'blogs'%}">
+                        <div class="filter-search">
+
+                            <div class="filter-gap filter-search-Cat">
+                                <select class="bordered-element-light form-control custom-select text-muted" name='categoryName' data-msg="Please select country.">
+                                    <option value="">Select Catogory</option>
+                                    {% for cat in categories %}
+                                    <option value="{{cat}}">{{cat}}</option>
+                                    {% endfor %}
+
+                                </select>
+                            </div>
+
+                            <div class="filter-gap filter-search-Year">
+                                <select class="bordered-element-light form-control custom-select text-muted" name='year' data-msg="Please select country.">
+                                    <option value="">Select Year</option>
+                                    {% for yr in post_year %}
+                                    <option value="{{yr}}">{{yr}}</option>
+                                    {% endfor %}
+
+                                </select>
+                            </div>
+
+                            <button class="w-100 btn bordered-element-light himani-btn" type="submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="">
+                <div class="mb-3">
+                    <h3 class="text">Tags</h3>
+                </div>
+                <form action="{% url 'blogs'%}">
+                    {% for tag in tags %}
+                    <button class="btn-custom btn-xs text mb-1 bordered-element   bg-white" name="tag" type="submit" value="{{tag.slug}}">{{tag}}</button> {% endfor %}
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Hero Section -->
+
+
+
+
+
+
+
+
+
+<!-- Articles Section -->
+<div class="container">
+    <!-- Title -->
+    <div class=" mx-md-auto mb-5 mb-md-9">
+        <h2 class="h1">Best Contents Daily</h2>
+        <p>We've helped some great companies brand, design and get to market.</p>
+    </div>
+    <!-- End Title -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row mx-n2 mb-5 mb-md-9">
+
+
+                {% for blog in blogs %}
+
+                <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
+                    <!-- Card -->
+                    <a class="card h-100 transition-3d-hover" href="{% url 'blog' blog.post_id %}">
+                        
+                        <img src="../../media/{{blog.thumbnail}}" class="blog-img" alt="Image Description">
+                        <div class="card-body">
+                            <span class="d-block small font-weight-bold text-cap mb-2">{{blog.category}}</span>
+                            <h5 class="mb-0">{{blog.title}}</h5>
+
+                        </div>
+                    </a>
+                    <!-- End Card -->
+                </div>
+
+
+                {% endfor %}
+
+
+            </div>
+
+
+
+            <!-- Pagination Code starts from Here -->
+
+
+
+            <nav aria-label="Page navigation example hide-mobile">
+                {% if blogs.has_other_pages %}
+                <ul class="pagination">
+                    {% if blogs.has_previous %}
+                    <li class="previous page-item"><a href="?page={{ blogs.previous_page_number }}"><i
+                                class="fa fa-chevron-left"> </i></a></li>
+                    {% else %}
+                    <li class="disabled page-item"><i class=""></i></li>
+                    {% endif %} {% for i in blogs.paginator.page_range %} {% if blogs.number == i %}
+                    <li class="active-slide page-item"><span>{{ i }} <span class="sr-only">(current)</span></span>
+                    </li>
+                    {% else %}
+                    <li class="next page-item"><a href="?page={{ i }}">{{ i }}</a></li>
+                    {% endif %} {% endfor %} {% if blogs.has_next %}
+                    <li class="next-slide page-item"><a href="?page={{ posts.next_page_number }}"><i
+                                class="fa fa-chevron-right"></i></a></li>
+                    {% else %}
+                    <li class="disabled page-item"><i class="bi bi-caret-right-fill"></i></li>
+                    {% endif %}
+                </ul>
+                {% endif %}
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+<div class='d-flex justify-content-center w-100' style="background-color: #f7f7f7;display:flex;margin-bottom:4% !important; margin: auto;">
+    <div class="subscribe-custom">
+        <div class=" text-center  mb-4 mt-4 ">
+            <h2 class="h1">SAY IN TOUCH : </h2>
+            
+        </div>
+        <div class=" d-flex justify-content-center">
+            <div class=w-60>
+
+                <p>
+                    Get expert unlimited marketing tips on Brand Awareness | Brand Marketing | Brand Visibility  straight to your inbox, and become a Best business man. 
+                    Subscribe to the Marketing Blog below.</p>
+            </div>
+
+            <div class="w-10" style="">
+                <form class="js-validate" action="{% url 'subscribe' %}">
+                    <div style="display:flex">
+                        <div class="col-sm col-md-6 col-lg mb-2 mt-0">
+                            <div class="js-form-message">
+                                <label class="sr-only" for="signupSrEmailExample1">Your email</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control bordered-element-light" style="background-color: #f7f7f7; height: 51px;" name="email" placeholder="Your email " required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-auto">
+                            <button type="submit" class="btn btn-primary btn-block bordered-element-light">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> 
+
+    </div>
+</div>
+
+
+{% endblock content %}

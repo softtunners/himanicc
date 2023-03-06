@@ -1,0 +1,26 @@
+{% include 'html/base.html' %} {% block content %} {%block head %}
+<title>Himani'sCC || ScrapBook </title>{% endblock head %}
+
+<!-- End Hero Section -->
+<section class="blog-section" style="margin:-10% !important">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col space-top-3 space-bottom-2">
+                {% comment %} <a class="btn btn-primary"href="{% url 'mailformats' %}"role="button">Go BACK</a>
+
+                    <h2 class="h2">{{mail.subject}}</h1>     {% endcomment %}
+                <div class=" mx-lg-auto">
+                    <div class="mb-4">
+                       <br>{{mail.message | safe}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- End Blogs Section -->
+
+{% endblock content %}
+

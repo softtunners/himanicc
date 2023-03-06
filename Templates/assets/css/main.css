@@ -1,0 +1,572 @@
+.banner-img-vh {
+    height: 80vh !important;
+}
+
+.logo-h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.logo-p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.job-card {
+    padding: 0.75rem 1rem!important;
+}
+
+.filter-gap-2 {
+    margin: 0 0 1rem 0;
+}
+
+.test-quote-f {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.test-quote-img {
+    z-index: 999;
+}
+
+.testi-box {
+    height: 300px!important;
+    overflow: scroll!important;
+    background: url(/assets/img/test3.svg) no-repeat!important;
+    background-size: cover!important;
+}
+
+.testi-box::-webkit-scrollbar {
+    display: none;
+}
+
+.index-counter 
+    {
+        height: 59px;
+        display: flex;
+        align-items: center;
+        width: 82%;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0px 12px 15px rgb(140 152 164 / 10%);
+        border-radius: 10px;
+        background: white;
+    }
+
+.counter-section-main {
+    transform: translateY(-180px);
+    border-radius: 10px;
+}
+.counter-section-main-home{
+    transform: translateY(-100px);
+    border-radius: 10px;
+}
+@media(min-width:1570px){
+    .counter-section-main-home{
+        transform: translateY(-90px);
+        border-radius: 10px;
+    }
+}
+
+.counter-section-main-career {
+    transform: translateY(-140px);
+    border-radius: 10px;
+}
+
+.visits-c-2 {
+    margin: 0 1rem;
+}
+
+.test-quote {
+    line-height: 200%;
+}
+
+.WCS-Content {
+    text-align: justify;
+}
+
+.clients-logo-slide {
+    margin-bottom: 2rem!important;
+}
+
+.clients-logo-slide>img {
+    width: 100px;
+}
+
+.text-section {
+    width: 70%!important;
+}
+
+.sub-heading {
+    font-size: 22px!important;
+}
+
+
+/* Index.html || Header (Nav Bar) ---------------------------------------------------------------- */
+
+.nav-bar-btn {
+    border-radius: 0% !important;
+    border: 1px solid #00beff !important;
+    background-color: #007bb6!important;
+    color: white!important;
+}
+
+
+/* index.html || slider--------------------------------------------------------------------------- */
+
+.slider-height {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.description-2 {
+    color: white;
+    font-size: 17px !important;
+}
+
+.slick-v-test {
+    /* margin-top: 20px; */
+}
+
+.team-content {
+    padding: 0 25px 0 50px;
+}
+
+.team-profile {
+    padding: 0 25px 0 0;
+}
+
+.index-c-p {
+    font-size: 14px!important;
+}
+
+
+/* Index.html || Service Section -------------------------------------------------------------------*/
+
+
+/* .service-frame { 
+    transform: translateY(-55px);
+} */
+
+.home-service-icon {
+    font-size: 30px;
+    align-items: center;
+}
+
+.service-section {
+    transform: translateY(-100px)!important;
+}
+
+.banner-content-2 {
+    transform: translateY(500px);
+}
+
+
+/* Index.html || Blog Section ---------------------------------------------------------------------- */
+
+.read-more {
+    font-size: 12px !important;
+    bottom: 0px !important;
+    position: absolute;
+}
+
+
+/* About.html || List Section ----------------------------------------------------------------------------------- */
+
+.about-main-list {
+    line-height: 150%;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-main-list i {
+    color: #00beff;
+    padding: 0 10px;
+}
+
+.about-list {
+    font-weight: bold;
+    color: black!important;
+    font-size: 18px;
+}
+
+
+/* About.html || Team Section ---------------------------------------------------------------------------------- */
+
+.team-card {
+    margin: 10px 10px 20px 10px;
+    border-radius: 0;
+}
+
+.view-profile {
+    width: 100% !important;
+    color: white !important;
+    font-size: 15px !important;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #007bb6;
+}
+
+.team-designation {
+    margin-bottom: 10px;
+}
+
+.media-body-team {
+    height: 500px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+@media(max-width:1450px){
+    
+.logo-h3 {
+    margin: 0;
+    font-size: 13px !important;
+}
+
+.logo-p {
+    margin: 0;
+    font-size: 10px!important;
+}
+}
+
+@media (max-width:552px) {
+    .media-body {
+        height: 100% !important;
+    }
+}
+
+.media-body-team::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Model Section || Team Sectoin */
+
+.img-model {
+    width: 300px !important;
+    height: 380px !important;
+}
+
+
+/* Blog.html || Filter Search ---------------------------------------------------------------------- */
+
+.filter-gap {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* base.html || Footer || -----------------------------------------------------------------------------*/
+
+.header {
+    position: fixed !important;
+    z-index: 999 !important;
+    /* background-color: white; */
+}
+
+.dropdown-menu {
+    border-radius: 0!important;
+    padding: 0;
+}
+
+.dropdown-item:last-child {
+    border-top: 1px solid white;
+}
+
+.dropdown-item:nth-last-child(2) {
+    border-top: 1px solid white;
+}
+
+.logo-nav {
+    width: 50px !important;
+}
+
+.footer {
+    bottom: 0 !important;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    height: 8vh !important;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* background: url(/assets/img/bg-footer.jpg); */
+    /* background-size: cover; */
+    box-shadow: 4px 1px 6px 0px #00000042;
+    background: #000000;
+}
+
+.social-icon i {
+    font-size: 24px!important;
+}
+
+.footer-social {
+    padding-right: 20px;
+    justify-content: space-around!important;
+}
+
+@media(max-width:552px) {
+    .footer {
+        background: #000;
+    }
+    .footer-social {
+        padding: 0 5px 0 15px;
+    }
+}
+
+
+/* Service.html ||---------------------------------------------- */
+
+.icon-service-top {
+    transform: translateY(-100px);
+}
+
+.service-tabs {
+    order: 1!important;
+}
+
+
+/* Contact.html || ---------------------------------------------------- */
+
+.contact-frame {
+    /* background: url(/assets/img/1920\ X\ 1080\ Background\ Image.jpg); */
+    background-size: cover;
+    /* height: 92vh; */
+    background-repeat: no-repeat;
+}
+
+.contact-btn-hide {
+    position: absolute;
+    top: 50%;
+    right: 0!important;
+    color: white;
+    background-color: #007bb6;
+    padding: 10px;
+    font-size: 20px;
+    transition: 500ms;
+    border: 0;
+}
+
+.contact-btn-hide:hover {
+    color: #007bb6;
+    background-color: rgb(233, 233, 233);
+}
+
+#carrierHide {
+    display: none;
+}
+
+.contact-btn-hide i {
+    font-style: normal;
+}
+
+
+/* Elements that are used everywhere in the page */
+
+.bordered-element {
+    border-radius: 0% !important;
+    border: 1px solid #71869d !important;
+}
+
+.bordered-element-light {
+    border-radius: 0% !important;
+    /* border: 1px solid #00beff !important; */
+}
+
+.himani-btn {
+    background-color: #007bb6!important;
+    color: white;
+}
+
+.last-section {
+    margin-bottom: 50px;
+}
+
+@media (max-width:552px) {
+    .banner-everywhere {
+        height: 60vh;
+        align-items: center;
+        display: flex;
+    }
+}
+
+
+/* Bootstrap classes Changes */
+
+.card {
+    border-radius: 0% !important;
+    /* border: 1px solid #dddddd !important; */
+}
+
+.modal-content {
+    border-radius: 0 !important;
+}
+
+.modal-dialog {
+    max-width: 892px !important;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.step .step-icon {
+    border-radius: 0% !important;
+}
+
+
+/* Main TAG Section Everywhere in page */
+
+.himani-main {
+    margin: 20px;
+}
+
+.card-client {
+    height: 80px !important;
+    margin: 10px -5px;
+    box-shadow: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0 !important;
+}
+
+@media(max-width:1800px) {
+    .index-c-p {
+        font-size: 12px!important;
+    }
+}
+
+@media (max-width:992px) {
+    .hide-tablet {
+        display: none;
+    }
+    .navbar-brand{
+        position: absolute;
+        bottom:0%;
+        left:40%;
+    }
+    .service-tabs {
+        order: 0!important;
+    }
+}
+
+@media (max-width:552px) {
+    .hide-mobile {
+        display: none;
+    }
+    .service-tabs {
+        order: 0!important;
+    }
+    .define-pro-card {
+        padding: 0 30px;
+    }
+    .contact-frame {
+        background: white!important;
+    }
+    .frame {
+        height: auto!important;
+    }
+    .counter-h3 {
+        font-size: 18px !important;
+    }
+    .counter-p {
+        font-size: 12px !important;
+    }
+    .service-frame {
+        transform: translateY(0px);
+        margin-top: 3rem;
+    }
+    .service-frame .card {
+        box-shadow: none;
+    }
+    .h4-552 {
+        font-size: 14px;
+    }
+    .banner-blog {
+        height: 100%;
+    }
+    .visits-counter {
+        padding: 15px 0;
+        margin: 0;
+    }
+    .index-c-p {
+        font-size: 12px!important;
+    }
+    .counter-section-main {
+        transform: translateY(-180px);
+    }
+    .counter-section-main-career {
+        transform: translateY(-140px);
+    }
+    .counter-section {
+        width: 80%!important;
+        border-radius: 10px;
+    }
+    .index-counter-ot {
+        padding: 5px;
+    }
+    .index-counter {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 10px;
+    }
+    .visits-c-2 {
+        margin: 0;
+    }
+    .index-c-pext-primary {
+        font-size: 28px!important;
+    }
+    .slick-v-test {
+        transform: translate(0px)!important;
+    }
+    .test-quote {
+        font-size: 15px;
+        line-height: 200%;
+    }
+    .test-content {
+        text-align: center;
+    }
+    .about-main-list {
+        font-size: 14px;
+    }
+    .testi-box {
+        height: 400px!important;
+        overflow: scroll;
+        padding: 10px;
+    }
+    .content-client {
+        font-size: 14px;
+        line-height: 200%;
+        color: black;
+    }
+    .about-list {
+        font-size: 15px!important;
+    }
+    .testi-box {}
+}
+
+.content-client {
+    /* font-size: 14px; */
+    line-height: 200%;
+    color: black;
+}
+
+.glass-morphisam {
+    background: rgba(255, 255, 255, 0.273);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 20px);
+    -webkit-backdrop-filter: blur( 20px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}

@@ -1,0 +1,341 @@
+<!-- ========== HEADER ========== -->
+{% include 'html/link.html' %} {% block content %}
+
+<style>
+   @media(min-width:1400px) {
+
+       .header-section-custom{
+           margin: 25px 35px;
+           
+        }
+    }
+    @media(min-width:1600px) {
+
+        .header-section-custom{
+            margin: 25px 65px;
+            
+         }
+     }
+
+     @media(max-width:800px){
+        .hide-800{
+            display: none;
+        }
+     }
+</style>
+
+<header id="header" class="header header-bg-transparent header-abs-top py-3">
+    <div class="header-section navbar-expand header-section-custom">
+        <div id="logoAndNav" class=" px-3">
+            <nav class="navbar">
+                <a class="navbar-brand" >
+                </a>
+                <a id="menu-btn" onclick="openNav()" href="javascript:void(0)">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "23rem"
+        document.getElementById("menu-btn").style.display = "none"
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0px"
+        var main_menu = document.getElementById("menu-btn")
+        main_menu.style.display = "block"
+
+
+    }
+</script>
+
+
+<aside id="mySidenav" class="wrapper align-items-stretch sidenav">
+    <div>
+        <div class="sidebar-header">
+            <div class="sidebar-footer-offset" style="padding-bottom: 11.5rem;">
+                <div class="d-flex justify-content-between align-items-center border-bottom p-3 px-7">
+                    <div class="logo">
+                        <a class="nav-bar" href='{% url "home" %}'>
+                            <img src="/assets/img/hcc-logo-final-96x96.png" style="width: 50px; height: 50px;"> <a href="{% url 'home'%}" style='color:black;font-weight:bold'>Himani's CC</a>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                            &times;
+                        </a>
+                    </div>
+                </div>
+
+                <div class="scrollbar sidebar-body">
+                    <div class="d-flex justify sidebar-content">
+                        <figure class="w-100 mx-auto mb-3">
+                            <div>
+                                <div class="content-menu">
+                                    {% with request.resolver_match.url_name as url_name %}
+                                    <ul id="navbar-toggler" class="main-menu">
+
+                                        <style>
+                                            .active-2 {
+                                                text-decoration: underline;
+                                            }
+                                        </style>
+
+                                        <li class="u-has-submenu {% if url_name == 'home' %}active-2{% endif %}">
+                                            <a class="nav-link" href="{% url 'home'%}">
+                                                Home
+                                            </a>
+                                        </li>
+                                        <li class="u-has-submenu">
+                                            <div class="hs-unfold" style=' margin: 10px 14px;'>
+                                                <a class="js-hs-unfold-invoker  dropdown-toggle " style=' color:#677788;  ' href="javascript:;" data-hs-unfold-options='{
+                                                   "target": "#basicDropdownClick2"
+                                                 }'>  Who We Are</a>
+                
+                                                <div id="basicDropdownClick2" style="transform: translate(20px, -30px)!important;  box-shadow: 4px 3px 6px 5px #00000042;" class="hs-unfold-content dropdown-menu">
+                                                    <a class="dropdown-item" href="{% url 'home'%}#frame-2">Our Services</a>
+                                                    <a class="dropdown-item" href="{% url 'home'%}#frame-5">Why Choose Us</a>
+                                                    <a class="dropdown-item" href="{% url 'home'%}#frame-6">Our Team</a>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li class="u-has-submenu">
+                                            <a class="nav-link {% if url_name == 'services' %}active-2{% endif %}" href="{% url 'services'%}">
+                                                What we do
+                                            </a>
+                                        </li>
+
+
+                                        <li class="u-has-submenu">
+                                            <a class="nav-link {% if url_name == 'blogs' %}active-2{% endif %}" href="{% url 'blogs'%}">
+                                                Blogs
+                                            </a>
+                                        </li>
+
+
+                                        <li class="u-has-submenu">
+                                            <a class="nav-link {% if url_name == 'scrapbook' %}active-2{% endif %}" href="{% url 'scrapbook'%}">
+                                                ScrapBook
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="u-has-submenu">
+                                            <a class="nav-link {% if url_name == 'mailformats' %}active-2{% endif %}" href="{% url 'mailformats' %}">
+                                                E-mailer
+                                            </a>
+                                        </li>
+                                        <li class="u-has-submenu">
+                                            <a class="nav-link {% if url_name == 'about' %}active-2{% endif %}" href="{% url 'career'%}">
+                                                Career
+                                            </a>
+                                        </li>
+
+                                        <li class="u-has-submenu">
+                                            <a class="nav-link {% if url_name == 'contact' %}active-2{% endif %}" href="{% url 'contact' %}">
+                                                Contact Us
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                    {% endwith %}
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+
+            <footer class="sidebar-footer border-top text-center py-4 px-7" style="height: 8vh;">
+                <p class="small mb-0">
+                    <a class="link-underline" href="javascript:;">Himani's CC All Rights Reserved</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    #menu-btn {
+        padding: 10px 15px;
+        background-color: #007bb6 !important;
+        color: white;
+    }
+    
+    .main-menu {
+        padding: 0;
+        list-style: none;
+    }
+    
+    .main-menu li {
+        padding-left: 3rem;
+    }
+    
+    .content-menu {
+        margin-top: 1.5rem;
+    }
+    
+    .sidenav {
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        z-index: 1003;
+        right: 0;
+        top: 0;
+        box-shadow: -5px 0px 12px rgba(103, 119, 136, 0.1);
+        background-color: #fff;
+        transition: 0.5s;
+    }
+    
+    .sidenav .closebtn {
+        position: relative;
+        top: 0;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+</style>
+
+
+
+
+
+<script>
+    $(document).on('ready', function() {
+        var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+    });
+</script>
+
+
+
+
+
+
+
+<footer class="footer d-flex justify-content-space-around text-center">
+    <div class="w-100">
+        <div class="align-items-center">
+            <div class="row align-items-center" style="justify-content:space-around;">
+                <div class="col-md-2 hide-800">
+                    <a style="transform:translateX(14px);" href='{% url "home" %}'>
+                        <img style="width: 8.5rem;" class="img-fluid" src="/assets/img/LogoMain.png" alt="Logo" >
+                    </a>
+                </div>
+               
+                <div class="col-md-6 hide-tablet">
+                    <ul class="list-unstyled  d-flex m-0 justify-content-around ">
+                        <li class="m-0">
+                            <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle text-white" href="javascript:;" data-hs-unfold-options='{
+                                   "target": "#basicDropdownClick"
+                                 }'>Home</a>
+
+                                <div style="transform: translate(-33px, -30px)!important; box-shadow: 4px 1px 6px 0px #00000042;" id="basicDropdownClick" class="hs-unfold-content dropdown-menu">
+                                    <a class="dropdown-item " href="{% url 'home'%}#frame-3">Our Great Partners</a>
+                                    <a class="dropdown-item " href="{% url 'home'%}#frame-4">What Our Client Says</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle text-white" href="javascript:;" data-hs-unfold-options='{
+                                   "target": "#basicDropdownClick2"
+                                 }'>Who We Are</a>
+
+                                <div id="basicDropdownClick2" style="transform: translate(-33px, -30px)!important;  box-shadow: 4px 1px 6px 0px #00000042;" class="hs-unfold-content dropdown-menu">
+                                    <a class="dropdown-item" href="{% url 'home'%}#frame-2">Our Services</a>
+                                    <a class="dropdown-item" href="{% url 'home'%}#frame-5">Why Choose Us</a>
+                                    <a class="dropdown-item" href="{% url 'home'%}#frame-6">Our Team</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="text-white" href="{% url 'service'%}#frame-2">What We Do</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="{% url 'scrapbook'%}">Scrapbook</a>
+                        </li>
+                        <li>
+                            <a class="text-white"  href="{% url 'blogs'%}">Blog</a>
+                        </li>
+                        <li>
+                            <a class="text-white"  href="{% url 'career'%}">Career</a>
+                        </li>
+                        
+                        <li >
+                            <a class="text-white" href="{% url 'contact' %}">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+               
+                <div class="col-md-4">
+                    <ul class="mb-0 d-flex  footer-social">
+                        <li class="list-inline-item">
+                            <a class="btn btn-sm btn-icon btn-soft-light bordered-element-light social-icon" target="_blank" data-placement="top" title="LinkedIn" href="https://www.linkedin.com/in/himanicc/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-sm btn-icon btn-soft-light bordered-element-light social-icon" target="_blank" data-placement="top" title="FaceBook" href="https://www.facebook.com/himanicc">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-sm btn-icon btn-soft-light bordered-element-light social-icon" target="_blank" data-placement="top" title="Twitter" href="https://twitter.com/himanicc">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-sm btn-icon btn-soft-light bordered-element-light social-icon" target="_blank" data-placement="top" title="Instagram" href="https://www.instagram.com/himanicc22/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-sm btn-icon btn-soft-light bordered-element-light social-icon" target="_blank" data-placement="top" title="whatsapp" href="https://wa.me/9869220672">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="btn btn-sm btn-icon btn-soft-light bordered-element-light social-icon " target="_blank" data-placement="top" title="Map" href="https://www.google.com/maps/place/Himani's+Creative+Communication/@19.1044896,72.8760539,15.25z/data=!4m5!3m4!1s0x3be7c92ded89c96d:0x1a94420a5f2164d1!8m2!3d19.1088565!4d72.8796685">
+                                <i class="fas fa-map-marker"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+{% endblock content %}

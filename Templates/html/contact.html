@@ -1,0 +1,433 @@
+{% include 'html/base.html' %} {% block content %} {%block head %}
+<title>Himani'sCC || Contact </title>{% endblock head %}
+
+
+
+
+
+
+<style>
+    .form-control {
+        background-color: #000a0e0a;
+        border: 1px solid #40404026;
+        color: Black!important;
+    }
+    
+    .contact-f-section {
+        width: 50%!important;
+    }
+    
+    .contact-a-section {
+        width: 50%!important;
+    }
+    
+    .contact-a-card {
+        background-color: #e4e4e478;
+        box-shadow: none;
+    }
+    
+    .contact-row {}
+    
+    @media(max-width:552px) {
+        .contact-f-section {
+            width: 100%!important;
+        }
+        .contact-a-section {
+            width: 100%!important;
+        }
+    }
+    
+    
+    /* New Contact Page */
+    
+    .contact-page-main {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .card-social {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .card-contact {
+        width: 300px;
+        height: 200px;
+    }
+    
+    .mid-contact-card {
+        height: 360px;
+    }
+    
+    .rotate-card-5 {
+        transform: rotate(5deg);
+    }
+    
+    .rotate-cardn-5 {
+        transform: rotate(-5deg);
+    }
+    
+    .mid-contact-card-2 {
+        height: 280px;
+    }
+    
+    .social-contact {
+        width: 100%;
+    }
+    
+    .footer-social-2 {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    
+    .Social-btn i {
+        padding: 10px;
+    }
+    
+    .social-btn-li {
+        padding: 0 15px 0 5px;
+        display: flex;
+        align-items: center;
+        border-radius: 0!important;
+        border: 1px solid rgba(184, 184, 184, 0.342);
+    }
+    
+    .Social-btn {
+        font-size: 16px!important;
+        padding: 0;
+        color: rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+    }
+    
+    .transform-1 {
+        transform: translateX(40px);
+    }
+    
+    .transform-2 {
+        transform: translateX(-40px);
+    }
+    
+    .contact-r-card {
+        margin-top: -10px;
+    }
+    
+    @media (min-width:1750px) {
+        .contact-r-card {
+            margin-top: -230px;
+        }
+    }
+    
+    @media (max-width:1750px) {
+        .contact-r-card {
+            margin-top: -150px;
+        }
+    }
+    @media (max-width:1200px) {
+        .contact-r-card {
+            margin-top: 0px;
+        }
+    }
+    
+    @media (max-width:992px) {
+        .transform-1 {
+            transform: translateX(0px);
+        }
+        .transform-2 {
+            transform: translateX(0px);
+        }
+        .rotate-card-5 {
+            transform: rotate(0deg);
+        }
+        .rotate-cardn-5 {
+            transform: rotate(0deg);
+        }
+        .md-hide {
+            display: none;
+        }
+        .social-btn-li {
+            padding: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+    .footer-social-2 {
+        padding: 2rem;
+        width: 100%;
+    }
+    
+    @media (max-width:552px) {}
+    
+    .li-btn-s:hover {
+        color: #0077b5;
+        transition: 0.5s;
+    }
+    
+    .fb-btn-s:hover {
+        color: #4267B2;
+        transition: 0.5s;
+    }
+    
+    .Wh-btn-s:hover {
+        color: #25D366;
+        transition: 0.5s;
+    }
+    
+    .In-btn-s:hover {
+        color: #3f729b;
+        transition: 0.5s;
+    }
+    
+    .Map-btn-s:hover {
+        color: #db3236;
+        transition: 0.5s;
+    }
+    
+    .tw-btn-s:hover {
+        color: #1DA1F2;
+        transition: 0.5s;
+    }
+    
+    .h-50 {
+        height: 60vh!important;
+    }
+    
+    .co-icon i {
+        font-size: 40px;
+    }
+</style>
+<style>
+    .rotate-cardn-5 {
+        transform: rotate(-5deg);
+    }
+    .carrierBG{
+        height: 60vh;
+        opacity:1;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    @media(max-width:1600px){
+        .carrierBG{
+        height:70vh;
+    }
+   
+    }
+    @media(max-width:1200px){
+        .carrierBG{
+        height:50vh;
+    }}
+    @media(max-width:1000px){
+        .carrierBG{
+        height:50vh;
+    }
+    }
+    @media(max-width:700px){
+        .container{
+            margin-top: 19% !important;
+
+        }
+    }
+    @media(max-width:500px){
+        .container{
+            margin-top: 28% !important;
+
+        }
+    }
+</style>
+
+
+
+<!-- Hero Section -->
+<div class="align-items-center carrierBG" style=" background-image: url(/assets/img/contact/contact1.jpg);">
+
+    <div class="contact-sec-2 text-center d-flex justify-content-center w-100 ">
+        <div class="container" style="    margin-top: 5%;    ">
+            <div class="Content w-md-100 space-bottom-1">
+                <h2>Need Some Business Advice Let's Talk</h2>
+                <p class="text-dark">Looking for some Branding & Business growth advice to move your business forward?<br/>Let’s talk about how I can help your business</p>
+    
+                <a class="btn btn-primary text-center  " style="color:white;background-color:black"  href="#modal" data-toggle="modal" data-target="#exampleModal">Click Here</a>
+            </div>
+    
+        </div>
+    </div>
+</div>
+
+
+<!-- End Hero Section -->
+<div class="position-relative d-flex align-items-center justify-content-center contact-r-card">
+    <div class="container">
+        <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-5 mb-md-9">
+            <p class="text sub-heading text-dark ">Get In Touch</p>
+            <p class="sub-heading text-dark">We are looking for a new Exiting Projects and collaborations.<br/>Feel Free to contact us.</p>
+        </div>
+        <div class="row d-flex align-items-center space-bottom-4">
+
+            <div class="col-md-4 mb-3 mb-md-0 mb-md-n11 transform-1">
+                <a class="card text-center mid-contact-card-2 rotate-cardn-5 transition-3d-hover" style="    background-color: #d0d4d6;" href="{% url 'services'%}#frame-2 ">
+                    <div class="card-body p-lg-5">
+                        <figure class="max-w-8rem w-100 mx-auto mb-4 co-icon">
+                            <i class="fas fa-clock"></i>
+                        </figure>
+                        <h3 class="h4">Working Hours </h3>
+                        <p class="text-body mb-0">10:00am - 06:00pm Monday to Saturday </p>
+                    </div>
+                    <div class="card-footer font-weight-bold py-3 px-lg-5">
+                        About Company <i class="fas fa-angle-right fa-sm ml-1"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0 mb-md-n11">
+                <div class="card text-center mid-contact-card transition-3d-hover" style="    background-color: #007bb6;">
+                    <div class="card-body p-lg-5 d-flex justify-content-center flex-column">
+                        <figure class="max-w-8rem w-100 mx-auto mb-4 co-icon text-white">
+                            <i class="fas fa-address-book"></i>
+                        </figure>
+                        <h3 class="h4">Contact Details </h3>
+                        <p class=" mb-0 text-white">Mobile : +91 9869 220672 </p>
+                        <p class="text mb-0 text-white">Email : prashant@himanicc.com </p>
+                    </div>
+                    <div class="card-footer row" style="margin: 0; padding:0;">
+                        <div class=" col-md-6" style="padding: 5px 0 5px 5px;">
+                            <a class="btn btn-soft-navy text-white btn-block bordered-element-light text-dark">Email Us</a>
+                        </div>
+                        <div class="col-md-6" style="padding: 5px 5px 0px 5px;">
+                            <a class="btn btn-primary  text-white btn-block bordered-element-light">Call Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-md-n11 transform-2 " style="">
+                <a class="card text-center mid-contact-card-2 rotate-card-5 transition-3d-hover " style="    background-color: #d0d4d6;"href=" https://www.google.com/maps/place/Himani's+Creative+Communication/@19.1044896,72.8760539,15.25z/data=!4m5!3m4!1s0x3be7c92ded89c96d:0x1a94420a5f2164d1!8m2!3d19.1088565!4d72.8796685">
+                    <div class="card-body p-lg-5 ">
+                        <figure class="max-w-8rem w-100 mx-auto mb-4 co-icon ">
+                            <i class="fas fa-map-pin "></i>
+                        </figure>
+                        <h3 class="h4 ">Address</h3>
+                        <p class="text-body mb-0 ">Marol, Andheri E, Mumbai 59 | India</p>
+                    </div>
+                    <div class="card-footer font-weight-bold py-3 px-lg-5 "> 
+                        Navigate Map <i class="fas fa-angle-right fa-sm ml-1 "></i>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="modal fade bordered-element-light align-item-center" id="exampleModal" tabindex="-5" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Let's Connect </h5>
+                <button type="button" class="btn btn-xs btn-icon btn-soft-secondary bordered-element-light" data-dismiss="modal" aria-label="Close">
+                    <svg aria-hidden="true " width="10 " height="10 " viewBox="0 0 18 18 "
+                        xmlns="http://www.w3.org/2000/svg ">
+                        <path fill="currentColor "
+                            d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1
+                        c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z " />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div>
+                        <div class="media d-block d-sm-flex ">
+                            <div class="media-body media-body-team ">
+
+
+                                <form class="js-validates " action="{% url 'contact' %}" method="POST">
+                                    {% csrf_token %}
+                                    <div class="card-body p-4 p-md-7 ">
+                                        <div class="mb-4 ">
+                                            <h3>Fill out the form and we'll be in touch as soon as possible.</h3>
+                                        </div>
+
+                                        <div class="row mx-n2 ">
+                                            <div class="col-sm-6 px-2 ">
+
+                                                <div class="js-form-message form-group ">
+                                                    {{form.fname}}
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-sm-6 px-2 ">
+
+                                                <div class="js-form-message form-group ">
+                                                    {{form.email}}
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-sm-6 px-2 ">
+
+                                                <div class="js-form-message form-group ">
+                                                    {{form.number}}
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-sm-6 px-2 ">
+
+                                                <div class="js-form-message form-group ">
+                                                    {{form.service}}
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-sm-6 px-2 ">
+
+                                                <div class="js-form-message form-group ">
+                                                    {{form.website}}
+                                                </div>
+
+                                            </div>
+
+
+
+                                            <div class="col-sm-12 px-2 ">
+                                                <div class="js-form-message form-group ">
+                                                    {{form.comment}}
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <button type="submit " class="btn btn-block btn-primary ">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}

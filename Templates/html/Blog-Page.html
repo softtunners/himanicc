@@ -1,0 +1,376 @@
+{% include 'html/base.html' %} {% load social_share %} {% load humanize%} {% block content %} {%block head %}
+<title>Himani'sCC || {{blog.title}} </title>
+<meta property="og:image" content="../../media/{{blog.thumbnail}}"/>
+    <meta property="og:title" content="{{ blog.title }}">
+    <meta property="og:description" content="{{ blog.description }}">
+    <meta property="og:image" content="{{ blog.thumbnail.url }}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+	<meta property="og:type" content="article">
+
+
+{% endblock head %}
+
+
+
+
+<div class="bg-primary bg-img-hero" style="background-image: url(../../media/{{blog.thumbnail}});">
+    {% comment %} <div class="bg-primary bg-img-hero" > {% endcomment %}
+
+    <div class="container space-2 space-lg-3">
+        <div class="w-lg-65 text-center mx-lg-auto">
+            <h1 class="text-white mb-0">{{blog.title}}</h1>
+            <span class="writer-name text-white">Author : <a class="text-white font-weight-bold" href="">{{blog.writer_name}}</a></span>
+        </div>
+    </div>
+</div>
+<!-- End Hero Section -->
+<section class="blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9  space-top-3 space-bottom-2">
+                <div class=" mx-lg-auto">
+                    <div class="mb-4">
+                        {{blog.content | safe}}
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="w-lg-100 mx-lg-auto">
+
+                    <!-- Tags -->
+                    <div class="mt-5">
+                        <form action="{% url 'blogs'%}">
+
+                            {% for tag in blog.tags.all %}
+                            <button class="btn btn-xs btn-soft-secondary mb-1 bordered-element-light" name="tag" type="submit" value="{{tag.slug}}">{{tag}}</button> {% endfor %}
+
+                        </form>
+
+                    </div>
+
+                    <!-- End Badges -->
+
+                    <!-- Share -->
+                    <div class="row justify-content-sm-between align-items-sm-center mt-5">
+
+                        <div class="col-sm-6 mb-2 mb-sm-0">
+
+
+                            {% comment %} Like Unlike Buttton {% endcomment %} {% if liked %}
+                            <a class="btn btn-xs btn-soft-secondary  bordered-element-light mr-2" href="{% url 'like_post' blog.post_id %}" data-toggle="tooltip" data-placement="top" title="UnLike"><i class="fas fa-thumbs-down"></i>({{blog.like_post.count}}) </a>                            {% else %}
+                            <a class="btn btn-xs btn-soft-secondary  bordered-element-light mr-2" href="{% url 'like_post' blog.post_id %}" data-toggle="tooltip" data-placement="top" title="Like">
+                                <i class="fas fa-thumbs-up"></i>{{likes}} {{blog.like_post.count}}</a>
+                            {% endif %} {% comment %} {% endcomment %}
+
+                            <div class="d-flex align-items-center">
+
+                                <span class="d-block small font-weight-bold text-cap mr-2">Share:</span>
+
+                                <button class="btn btn-share twitter-i">{% post_to_twitter b.title b "<i class='fab fa-twitter'></i>" %}</button>
+                                <button class="btn btn-share linkedin-i"><a href="http://www.linkedin.com/shareArticle?url={{request.get_host}}{{ request.get_full_path }}" target="_blank"><i class="fab fa-linkedin"></i></a></button>
+                                <button class="btn btn-share facebook-i">{% post_to_facebook  b.get_absolute_url "<i class='fab fa-facebook'></i>" %}</button>
+                                <button class="btn btn-share email-i">{% send_email b.title "New Song: {{b.title}}. Check it out!" b "<i class='fas fa-envelope'></i>" %}</button>
+                                <button class="btn btn-share whatsapp-i">{% post_to_whatsapp b "<i class='fab fa-whatsapp'></i>" %}</button>
+                                <button class="btn btn-share share-i clipboard"><i class='fas fa-link'></i></button>
+                                <p class="copied"></p>
+
+                            </div>
+                        </div>
+                        <script>
+                            var $temp = $("<input>");
+                            var $url = $(location).attr('href');
+
+                            $('.clipboard').on('click', function() {
+                                $("body").append($temp);
+                                $temp.val($url).select();
+                                document.execCommand("copy");
+                                $temp.remove();
+                                $(".copied").text("URL copied!");
+                            })
+
+
+                            $(function() {
+                                $('[data-toggle="tooltip"]').tooltip()
+                            })
+                        </script>
+
+
+
+
+                        {% comment %} <div class="col-sm-6 text-sm-right">
+                            {% if next %}
+
+                            <a class="btn btn-xs btn-soft-secondary  bordered-element-light mr-2" href="{% url 'blog' next.id%}" data-toggle="tooltip" data-placement="top" title="Next Blog">
+                                Next </a> {% else %} {% endif %} {% if prev %}
+                            <a class="btn btn-xs btn-soft-secondary  bordered-element-light" href="{% url 'blog' prev.id%}" data-toggle="tooltip" data-placement="top" title="Previous Blog">
+                                Previous</a> {% endif %}
+
+
+                        </div> {% endcomment %}
+                    </div>
+                    <!-- End Share -->
+
+
+                    <br />
+
+
+
+                    <div class="mb-5">
+                        <h3>Post a comment</h3>
+                    </div>
+
+                    <!-- Form -->
+                    <form class="js-validate bordered-element-light" style="background-color: #e2e2e238 !important; padding: 10px 20px;" action="{% url 'comment' blog.post_id %}">
+                        <div class="form-row mt-3">
+                            <div class="col-sm-6 mb-sm-3">
+                                <div class="js-form-message form-group">
+                                    <label class="input-label">Name</label>
+                                    <input type="text" class="form-control bordered-element-light" name="name" id="inputName" placeholder="Name" aria-label="Name" required data-msg="Please enter your name.">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 mb-sm-3">
+                                <div class="js-form-message form-group">
+                                    <label class="input-label">Email</label>
+                                    <input type="email" class="form-control bordered-element-light" name="email" id="emailAddress" placeholder="Email address" aria-label="Email address" required data-msg="Please enter a valid email address.">
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-sm-3">
+                                <div class="js-form-message form-group">
+                                    <label class="input-label">Comment</label>
+                                    <textarea class="form-control bordered-element-light" rows="3" name="comment" id="descriptionTextarea" placeholder="Comment" required data-msg="Please enter your message."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center " style="margin-bottom:25px ;">
+                            <button type="submit" class="btn btn-primary btn-wide  bordered-element-light">Submit</button>
+                        </div>
+
+                    </form>
+                    <!-- End Form -->
+
+
+
+
+                    <!-- Basics Accordion -->
+                    <div id="basicsAccordion">
+                        <!-- Card -->
+                        <div class="mb-10 mt-4">
+                            <div class="card-header card-collapse" id="basicsHeadingOne">
+                                <h5 class="mb-0">
+                                    <button type="button" class="btn btn-link btn-block d-flex justify-content-between card-btn p-3" data-toggle="collapse" data-target="#basicsCollapseOne" aria-expanded="true" aria-controls="basicsCollapseOne">
+                                        Comment ({{count_comments}})
+
+                                        <span class="card-btn-toggle">
+                                            <span class="card-btn-toggle-default"><i class="fas fa-chevron-down"></i></span>
+                                            <span class="card-btn-toggle-active"><i class="fas fa-chevron-up"></i></span>
+                                        </span>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="basicsCollapseOne" class="collapse show" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+                                <div class="card-body">
+                                    <div class="pt-2 mb-11">
+                                        <ul class="list-unstyled">
+                                            <!-- Comment -->
+                                            {% for comment in comments %}
+                                            <li class="mb-5">
+                                                <div class="media align-items-center mb-2">
+                                                    <div class="avatar avatar-circle mr-3">
+                                                        <i class="fas fa-solid fa-user" style="font-size: 33px;"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <span class="h5 mb-0">{{comment.name}}</span>
+                                                            <small class="text-muted">{{comment.timestamp | naturaltime}}</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <p>{{comment.content}}</p>
+
+                                                {% comment %} <a class="font-weight-bold" href="#">Reply</a> {% endcomment %} {% comment %}
+                                                <ul class="list-unstyled mt-5">
+                                                    <!-- Comment -->
+                                                    <li class="mb-5">
+                                                        <div class="border-left border-3 pl-4">
+                                                            <div class="media align-items-center mb-2">
+                                                                <div class="avatar avatar-circle mr-3">
+                                                                    <img class="avatar-img" src="../../assets/img/100x100/img11.jpg" alt="Image Description">
+                                                                </div>
+                                                                <div class="media-body">
+                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                        <span class="h5 mb-0">Hanna Wolfe</span>
+                                                                        <small class="text-muted">1 day ago</small>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <p>Love it Dave! We're all about keeping it up.</p>
+
+                                                            <a class="font-weight-bold" href="#">Reply</a>
+                                                        </div>
+                                                    </li>
+                                                    <!-- End Comment -->
+                                                </ul> {% endcomment %}
+                                            </li>
+                                            {% endfor %}
+
+                                            <!-- End Comment -->
+
+                                            <!-- Comment -->
+                                            {% comment %}
+                                            <li class="mb-5">
+                                                <div class="media align-items-center mb-2">
+                                                    <div class="avatar avatar-circle mr-3">
+                                                        <img class="avatar-img" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <span class="h5 mb-0">Christina Kray</span>
+                                                            <small class="text-muted">2 days ago</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <p>Since our attention spans seem to be shrinking by the day — keeping it simple is more important than ever.</p>
+
+                                                <a class="font-weight-bold" href="#">Reply</a>
+                                            </li>
+                                            <!-- End Comment -->{% endcomment %}
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Card -->
+                    </div>
+                    <!-- End Basics Accordion -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <div class="col-md-3 space-3">
+                <div class="row">
+                    <div class="container">
+                        <div class="mb-7">
+                            <div class="mb-3">
+                                <h3>Filter Search</h3>
+                            </div>
+                            <form action="{% url 'blogs'%}">
+                                <div class="filter-search">
+
+                                    <div class="filter-gap filter-search-Cat">
+                                        <select class="bordered-element-light form-control custom-select text-muted" name='categoryName' data-msg="Please select country.">
+                                            <option value="">Select Catogory</option>
+                                            {% for cat in categories %}
+                                            <option value="{{cat}}">{{cat}}</option>
+                                            {% endfor %}
+
+                                        </select>
+                                    </div>
+
+                                    <div class="filter-gap filter-search-Year">
+                                        <select class="bordered-element-light form-control custom-select text-muted" name='year' data-msg="Please select country.">
+                                            <option value="">Select Year</option>
+                                            {% for yr in post_year %}
+                                            <option value="{{yr}}">{{yr}}</option>
+                                            {% endfor %}
+
+                                        </select>
+                                    </div>
+
+                                    <button class="w-100 btn bordered-element-light himani-btn" type="submit">Search</button>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+                        <div class="mb-7">
+                            <div class="mb-3">
+                                <h3>Recent Blog</h3>
+                            </div>
+
+                            <!-- Blog -->
+                            {% for blog in recent_blogs %}
+                            <article class="mb-3">
+                                <a class="card card-frame p-3" href="{% url 'blog' blog.post_id %}">
+                                    <div class="media align-items-center">
+                                        <div class="media-body mr-2">
+                                            <h4 class="h6 mb-0">{{blog.title}}</h4>
+                                            <span class="d-block font-size-1 text-body">{{blog.post_date}}</span>
+                                        </div>
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </a>
+                            </article>
+                            {% endfor %}
+                            <!-- End Blog -->
+
+                        </div>
+
+                        <!-- Sticky Block Start Point -->
+                        <div id="stickyBlockStartPoint"></div>
+
+                        <div class="js-sticky-block" data-hs-sticky-block-options='{
+                   "parentSelector": "#stickyBlockStartPoint",
+                   "breakpoint": "lg",
+                   "startPoint": "#stickyBlockStartPoint",
+                   "endPoint": "#stickyBlockEndPoint",
+                   "stickyOffsetTop": 24,
+                   "stickyOffsetBottom": 24
+                 }'>
+
+                            <div class="mb-7">
+                                <div class="mb-3">
+                                    <h3>Tags</h3>
+                                </div>
+                                <form action="{% url 'blogs'%}">
+
+                                    {% for tag in tags %}
+                                    <button class="btn btn-xs btn-soft-secondary mb-1  bordered-element-light" name="tag" type="submit" value="{{tag.slug}}">{{tag}}</button> {% endfor %}
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- End Blogs Section -->
+
+{% endblock content %}

@@ -1,0 +1,306 @@
+{% include 'html/base.html' %} {% block content %} {%block head %}
+<title>Himani'sCC || Carrier </title>{% endblock head %}
+
+
+<style>
+    .rotate-cardn-5 {
+        transform: rotate(-5deg);
+    }
+    .carrierBG{
+        height: 75vh;
+        opacity:1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .heading-career{
+        color:white;
+    }
+    
+    @media(max-width:1600px){
+        .carrierBG{
+        height:72vh;
+    }
+    }
+    @media(max-width:1400px){
+        .carrierBG{
+        height:72vh;
+    }
+    }
+    @media(max-width:1200px){
+        .carrierBG{
+        height:75vh;
+        }
+     
+        .counter-section-main-career {
+            transform: translateY(-160px);
+            border-radius: 10px;
+        }
+    
+    }
+    @media(max-width:1000px){
+        .carrierBG{
+        height:75vh;
+    }.counter-section-main-career {
+        transform: translateY(-160px);
+        border-radius: 10px;
+    }
+   
+    }
+
+    @media(max-width:800px){
+        .carrierBG{
+            height:35vh;
+        padding-bottom: 1rem;
+        background-size: cover;
+        background-position: 50%;
+    }
+    .counter-section-main-career {
+        transform: translateY(-60px);
+        border-radius: 10px;
+    }
+    .heading-career{
+        color:black;
+    }
+    }
+
+    @media(max-width:552px) {
+        .rotate-cardn-5 {
+            transform: rotate(0deg);
+        }
+        .heading-career{
+            color:black;
+        }
+    }
+</style>
+
+
+<!-- Signup Form Section -->
+<div class="align-items-center carrierBG" style="background-image: url(/assets/img/Carrier/careers.jpg); "></div>
+
+
+    <div class="container space-top-2 space-bottom-3 ">
+
+        <div class="counter-section-main-career justify-content-center w-70 ">
+                        <p class='heading-career' style="font-size: 15px;    text-align: center;
+                        font-weight: 700;">At himanis' CC, We seek hard-working, self starterst to join our family of collabaration and ambitions industry professionals.</p>
+                        <p  class='heading-career' style="
+                        font-size: 18px;    text-align: center;
+                        font-weight: 700;">Build Your Career and the future with us</p>
+
+        </div>
+
+          
+
+
+
+         <div class="row " style='    margin-top: -10%;'>
+            <div class="col-md-3 ">
+                <div class="border-bottom pb-5 mb-9 ">
+                    <form action="{% url 'career'%} " method="POST">
+                        {% csrf_token %}
+                        <div class="filter-search ">
+                            <div class="filter-gap-2 filter-search-Cat ">
+                                <h2>Open Positions</h2>
+
+                                <span class="d-block small font-weight-bold text-cap mb-2 ">Current Job Openings</span>
+                                <select class="bordered-element-light form-control custom-select text-muted" name='categoryName' data-msg="Please select country. ">
+                                    <option value=" ">--Select--</option>
+                                    {% for job in jobs %}
+                                    <option value="{{job.job_title}} ">{{job.job_title}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <button class="w-100 btn bordered-element-light himani-btn " type="submit ">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div> 
+            <div class="col-md-9 ">
+                {% for job in jobs %}
+                {% if job.expirydate >= today %}
+                <span style='color:green;'>Application Expiray Date : {{job.expirydate}}</span>
+                <a class="card card-frame mb-3 job-card " href="#modal" data-toggle="modal" data-target="#exampleModal" onclick="myFunction({{ forloop.counter }})" >
+                    <div class="row align-items-sm-center ">
+                        <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
+                           {{job.job_title}}
+                        </span>
+                        <span class="col-6 col-sm-3 text-body ">
+                            {{job.location}}
+                        </span>
+                      
+                        <span class="col-6 col-sm-3 text-right" data-toggle="modal" data-target="#exampleModal" id="apply">
+                            Apply <i class="fas fa-angle-right fa-sm ml-1 "></i>
+                        </span>
+                    </div>
+                </a>
+                <span class="col-6 col-sm-3 text-body " id= "description{{ forloop.counter }}" style="display:none;">
+                    {{job.description | safe}}   
+                </span>
+                {% endif %}
+                {% endfor %}
+
+                
+                
+
+            </div>
+            <hr style='width:100%; '>
+            <div class="col-md-9 ">
+                <h2>Recent Job Positions :</h2>
+                <br>
+                {% for job in jobs %}
+                {% if job.expirydate >= today %}
+                 <span style='color:green;'>Application Expiray Date : {{job.expirydate}}</span>
+                <a class="card card-frame mb-3 job-card " href="#modal" data-toggle="modal" data-target="#exampleModal" onclick="myFunction({{ forloop.counter }})" >
+                    <div class="row align-items-sm-center ">
+                        <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
+                           {{job.job_title}}
+                        </span>
+                        <span class="col-6 col-sm-3 text-body ">
+                            {{job.location}}
+                        </span>
+                      
+                        <span class="col-6 col-sm-3 text-right" data-toggle="modal" data-target="#exampleModal" id="apply">
+                            Apply <i class="fas fa-angle-right fa-sm ml-1 "></i>
+                        </span>
+                    </div>
+                </a>
+                <span class="col-6 col-sm-3 text-body " id= "description{{ forloop.counter }}" style="display:none;">
+                    {{job.description | safe}}   
+                </span>
+              
+                
+                {% else %}
+                <span style='color:red'>Application Closed: {{job.expirydate}}</span>
+                <a class="card card-frame mb-3 job-card " href="{% url 'contact' %}"  >
+                    <div class="row align-items-sm-center ">
+                        <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
+                           {{job.job_title}}
+                        </span>
+                        <span class="col-6 col-sm-3 text-body ">
+                            {{job.location}}
+                        </span>
+                      
+                        <span class="col-6 col-sm-3 text-right" >
+                            Enquiry <i class="fas fa-angle-right fa-sm ml-1 "></i>
+                        </span>
+                    </div>
+                </a>
+                <span class="col-6 col-sm-3 text-body " id= "description{{ forloop.counter }}" style="display:none;">
+                    {{job.description | safe}}   
+                </span>
+                {% endif %}
+                {% endfor %}
+
+                
+                
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function myFunction(x) {
+    document.getElementById('position').innerText = document.getElementById('title'+x).innerText;;
+    document.getElementById('jobdetails').innerHTML = document.getElementById('description'+x).innerHTML;;
+    }
+</script>
+
+
+<div class="modal fade bordered-element-light align-item-center" id="exampleModal" tabindex="-5" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog " role="document " style="height:150% !important;">
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <h5 class="modal-title " id="exampleModalLabel">Position Details
+                </h5>
+                <button type="button " class="btn btn-xs btn-icon btn-soft-secondary bordered-element-light " data-dismiss="modal" aria-label="Close">
+                    <svg aria-hidden="true " width="10 " height="10 " viewBox="0 0 18 18 "
+                        xmlns="http://www.w3.org/2000/svg ">
+                        <path fill="currentColor "
+                            d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1
+                        c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z " />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body ">
+                <div>
+                    <div>
+                        <div class="media d-block d-sm-flex ">
+                            <div class="media-body media-body-team " style="border:1px solid;">
+                                
+
+                                <div class="card-body p-4 ">
+                                    <div class="mb-4 ">
+                                        <h3 id="position"></h3>
+                                    </div>
+                                    <div class="" id="jobdetails">
+                                    </div>
+                                    
+                                </div>
+                                <div class="card-body p-4 p-md-7 ">
+                                    <div class="mb-4 ">
+                                        <h3>Fill out the form and we'll be in touch as soon as possible.</h3>
+                                    </div>
+                                    
+                                    <form href="{% url 'career'%}" method="POST" enctype="multipart/form-data">
+                                        {% csrf_token%} 
+                                        <div class="row mx-n2 ">
+                                            <div class="col-sm-6 px-2 ">
+                                                <div class="js-form-message form-group ">
+                                                    {{candidateform.job_title}}
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 px-2 ">
+                                                <div class="js-form-message form-group ">
+                                                    {{candidateform.name}}
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 px-2 ">
+                                                <div class="js-form-message form-group ">
+                                                    {{candidateform.email}}
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 px-2 ">
+                                                <div class="js-form-message form-group ">
+                                                    {{candidateform.phone_no}}
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-sm-12 px-2 ">
+                                                <div class="js-form-message form-group ">
+                                                    <div class="js-form-message form-group ">
+                                                        {{candidateform.additional_info}}
+                                                    </div>
+                                                    <label >Resume: </label>
+                                                     {{candidateform.resume}} 
+                                                    {% comment %} <input type="file" name="resume"> {% endcomment %}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="submit " class="btn btn-block btn-primary ">Submit</button>
+                                    </form>
+                                    </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}

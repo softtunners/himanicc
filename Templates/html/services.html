@@ -1,0 +1,503 @@
+{% include 'html/base.html' %} {% block content %} {%block head %}
+
+<style>
+    .card-services-inside {
+        height: 160px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    @media(max-width:1380px) {
+        .h3-services-icon {
+            font-size: 18px!important;
+        }
+    }
+    
+    @media(max-width:552px) {
+        .card-services-inside {
+            height: auto;
+        }
+    }
+</style>
+<title>Himani'sCC || What-We-Do </title>{% endblock head %}
+
+
+
+
+<!-- Hero Section -->
+<div class="js-slide  bg-img-hero space-3 align-items-center" style=" background-image:  url(/assets/img/services/Services1.jpg);">">
+
+{% comment %} <div class="bg-primary bg-img-hero" style="background-image: url(/assets/img/services/Services.jpg);"> {% endcomment %}
+    <div class="container space-2 space-lg-3">
+        <div class="w-lg-65 text-center mx-lg-auto">
+            <h1 class="text-dark mb-0">Our Design Studio in Action</h1>
+            <p class="description text-white" style="font-size:22px;font-weight:800;">Let's Work together to create game-changing experiences that will take your brand to next level.</p>
+        </div>
+    </div>
+</div>
+<!-- End Hero Section -->
+
+
+
+<div class="container space-0 icon-service-top" style=" transform: translateY(-70px);">
+    <div class="w-lg-100 mx-lg-auto">
+        <div class="row mx-n2">
+            <div class="col-sm-3  mb-3 mb-sm-0">
+                <div class="card-services-inside text-center bordered-element-light p-4 " style="background-color: #007bb6d9;">
+                    <figure class="w-100 max-w-8rem mx-auto" style="font-size: 50px;">
+                        <i class="fas fa-lightbulb text-white"></i>
+                    </figure>
+                    <h3 class=" mb-0 text-white h3-services-icon">Ideas & Plan</h3>
+                </div>
+            </div>
+            <div class="col-sm-3  mb-3 mb-sm-0">
+                <div class="card-services-inside text-center bordered-element-light p-4" style="background-color: #007bb6d9;">
+                    <figure class="w-100 max-w-8rem mx-auto" style="font-size: 50px;">
+                        <i class="fas fa-comment text-white"></i>
+                    </figure>
+                    <h3 class=" mb-0 text-white h3-services-icon">Customisation</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-3  mb-3 mb-sm-0">
+                <div class="card-services-inside text-center bordered-element-light p-4" style="background-color: #007bb6d9;">
+                    <figure class="w-100 max-w-8rem mx-auto" style="font-size: 50px;">
+                        <i class="fas fa-pen text-white"></i>
+                    </figure>
+                    <h3 class="mb-0 text-white  h3-services-icon">Unique Styles</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-3 ">
+                <div class="card-services-inside text-center bordered-element-light p-4" style="background-color: #007bb6d9;">
+                    <figure class="w-100 max-w-8rem mx-auto" style="font-size: 50px;">
+                        <i class="fas fa-image text-white"></i>
+                    </figure>
+                    <h3 class="mb-0 text-white  h3-services-icon">Creative Direction</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- SVG Top Shape -->
+{% comment %} <figure>
+    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="64px" viewBox="0 0 1921 273" style="margin-bottom: -8px; enable-background:new 0 0 1921 273;" xml:space="preserve">
+        <polygon fill="#f9fbff" points="0,273 1921,273 1921,0 " />
+    </svg>
+</figure> {% endcomment %}
+<!-- End SVG Top Shape -->
+
+<!-- Features Section -->
+<div id="frame-1" style="background-color:#e3e7ed">
+    <div class="container  space-lg-3">
+        <!-- Title -->
+        <div class="w-md-80 w-lg-50  text-center mx-md-auto mb-5 mb-md-9">
+            <span class="d-block  font-weight-bold text mb-2" style="font-size:35px;color:black;">Our Services</span>
+            <span class="d-block  font-weight-bold text mb-2" style="font-size:20px;color:gray;;">The best we deliver, The best we work on...</span>
+
+        </div>
+        <!-- End Title -->
+
+        <div class="row">
+
+            <div class="col-lg-4 mb-7 mb-lg-0 service-tabs">
+                <!-- Nav -->
+                <ul class="nav nav-box mx-0 mt-1" role="tablist">
+                    <li class="nav-item w-100">
+                        <a class="nav-link p-3 active bordered-element-light tab-card" id="pills-one-code-features-example2-tab" data-toggle="pill" href="#pills-one-code-features-example2" role="tab" aria-controls="pills-one-code-features-example2" aria-selected="true">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Brand Design & Awareness</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item w-100 mx-0 mt-1">
+                        <a class="nav-link p-3 bordered-element-light" id="pills-two-code-features-example2-tab" data-toggle="pill" href="#pills-two-code-features-example2" role="tab" aria-controls="pills-two-code-features-example2" aria-selected="false">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Digital Marketing Strategy</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item w-100 mx-0 mt-1">
+                        <a class="nav-link p-3 bordered-element-light" id="pills-three-code-features-example2-tab" data-toggle="pill" href="#pills-three-code-features-example2" role="tab" aria-controls="pills-three-code-features-example2" aria-selected="false">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Brand Building Strategy</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item w-100 mx-0 mt-1">
+                        <a class="nav-link p-3 bordered-element-light" id="pills-four-code-features-example2-tab" data-toggle="pill" href="#pills-four-code-features-example2" role="tab" aria-controls="pills-four-code-features-example2" aria-selected="false">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Brand Marketing Strategy</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item w-100 mx-0 mt-1">
+                        <a class="nav-link p-3 bordered-element-light" id="pills-five-code-features-example2-tab" data-toggle="pill" href="#pills-five-code-features-example2" role="tab" aria-controls="pills-five-code-features-example2" aria-selected="false">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Website Design & WebApplication</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item w-100 mx-0 mt-1">
+                        <a class="nav-link p-3 bordered-element-light" id="pills-Six-code-features-example2-tab" data-toggle="pill" href="#pills-Six-code-features-example2" role="tab" aria-controls="pills-four-code-features-example2" aria-selected="false">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Advertising Commercial</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item w-100 mx-0 mt-1">
+                        <a class="nav-link p-3 bordered-element-light" id="pills-Seven-code-features-example2-tab" data-toggle="pill" href="#pills-Seven-code-features-example2" role="tab" aria-controls="pills-four-code-features-example2" aria-selected="false">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Product Shoot & Design</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item w-100 mx-0 mt-1">
+                        <a class="nav-link p-3 bordered-element-light" id="pills-Eight-code-features-example2-tab" data-toggle="pill" href="#pills-Eight-code-features-example2" role="tab" aria-controls="pills-four-code-features-example2" aria-selected="false">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Signage & Display Design</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item w-100 mx-0 mt-1">
+                        <a class="nav-link p-3 bordered-element-light" id="pills-Nine-code-features-example2-tab" data-toggle="pill" href="#pills-Nine-code-features-example2" role="tab" aria-controls="pills-four-code-features-example2" aria-selected="false">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Event Planning and Design</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    {% comment %} <li class="nav-item w-100 mx-0 mt-1">
+                        <a class="nav-link p-3" id="pills-ten-code-features-example2-tab" data-toggle="pill" href="#pills-ten-code-features-example2" role="tab" aria-controls="pills-four-code-features-example2" aria-selected="false">
+                            <div class="media align-items-center">
+                                <div class="media-body">
+                                    <h4 class="mb-0 h6">Website Development</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul> {% endcomment %}
+                <!-- End Nav -->
+            </div>
+
+<style>
+    .tab-pane-custom{
+    }
+</style>
+            <div class="col-lg-8 service-content">
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <div class="tab-pane tab-pane-custom fade show active" id="pills-one-code-features-example2" role="tabpanel" aria-labelledby="pills-one-code-features-example2-tab">
+                        <img class="img-fluid mb-4" src="/assets/img/What-We-Do/Services-Tab/1.jpg" alt="Image Description">
+                        <p class="description text-justify"><b>-Brand Identity Design : </b>We strategically research Type, Colour and Fonts; to create a story that lets potential customers depict the persona of your business in one quick glance!
+                            <br>Then we retain that customer's attention and build their trust in your brand with consistent implementation of your logo and identity across all your marketing collateral. Yes, branding demands Persistence!
+                        </p>
+
+                        <p class="description text-justify"><b>-Brand Guideline : </b>Brand guidelines, also called a brand style guide, are essentially an instruction manual and rule book on how to communicate your brand.
+
+                            <ul>
+
+                                <li>
+                                    <b>Logos : </b> Full logos, secondary logos, and icons</li>
+                                <li><b>Colour palette : </b> Primary and secondary colours</li>
+                                <li><b>Typography : </b> Font styles, sizes, and spacing</li>
+                            </ul>
+                            </p>
+                        <p class="description text-justify"><b>-Corporate Identity Design : </b>Corporate identity includes all of a company’s visual aspects and design elements, reaching from logos to social media assets and stationery. Brand image is 
+                            instantly recognizable due to a strong corporate identity, and this creates a lasting impression on customers. We explore the take on corporate identity by three global firms, to see how these organizations prioritize their image.
+                        </p>
+                        <p class="description text-justify"><b>-Direct Mail Services Design : </b>Direct marketing is a form of communicating an offer, where organizations communicate directly to a pre-selected customer and supply a method for a direct response. Among practitioners, it is also known as direct response marketing. By contrast, advertising is of a mass-message nature.
+                        </p>
+                        <p class="description text-justify"><b>-Merchandising Services Design : </b>It is no longer sufficient to PULL in support for your product or services through traditional means such as TV, Radio, and Print Advertising; a PUSH strategy is increasingly required to emphasize personal engagement via online & social media and merchandise. We examine the media habits & lifestyle for your prospective customer segment and develop an integrated marketing communication plan that reinforces and builds relationships with your key stakeholders.
+                        </p>
+                    </div>
+                    
+
+                    <div class="tab-pane tab-pane-custom fade" id="pills-two-code-features-example2" role="tabpanel" aria-labelledby="pills-two-code-features-example2-tab">
+                        <img class="img-fluid mb-4" src="/assets/img/What-We-Do/Services-Tab/2.jpg" alt="Image Description">
+                        <p class="description">A marketing strategy is a plan for reaching a specific marketing-related goal (or goals) in a focused and achievable way. It takes into consideration what your business is currently doing well and what you're missing in regard to the objective you set, so you're more likely to accomplish it. Depending on the scale of your business, your marketing strategy may include several moving parts, each with different goals. With that said, working on your strategy can become daunting at times.
+                        </p>
+
+                    </div>
+
+                    <div class="tab-pane tab-pane-custom fade" id="pills-three-code-features-example2" role="tabpanel" aria-labelledby="pills-three-code-features-example2-tab">
+                        <img class="img-fluid mb-4 " src="/assets/img/What-We-Do/Services-Tab/3.jpg" alt="Image Description">
+                        <p class="description">Brand building is the process that implies using direct advertising campaigns to boost brand awareness, promote a specific product, establish connections and provide value to the target audience. It increases customer satisfaction, customer loyalty, and brand recognition.</p>
+
+                    </div>
+
+                    <div class="tab-pane tab-pane-custom fade" id="pills-four-code-features-example2" role="tabpanel" aria-labelledby="pills-four-code-features-example2-tab">
+                        <img class="img-fluid mb-4 " src="/assets/img/What-We-Do/Services-Tab/4.jpg" alt="Image Description">
+                        <p class="description">A brand strategy is a holistic approach behind how a brand builds identification and favorability with customers and potential customers. A brand strategy encompasses several different brand elements like voice, storytelling, brand identity, brand values, and overall vibe. 
+                            If your brand is how you present your business to the world, your branding strategy is the scaffolding that holds it up. "
+                            </p>
+                    </div>
+
+                    <div class="tab-pane tab-pane-custom fade" id="pills-five-code-features-example2" role="tabpanel" aria-labelledby="pills-five-code-features-example2-tab">
+                        <img class="img-fluid mb-4 " src="/assets/img/What-We-Do/Services-Tab/5.jpg" alt="Image Description">
+                        <p class="description">Create a Website You’re Proud of
+                            Web development refers in general to the tasks associated with developing websites for hosting via intranet or the internet. The web development process includes web design, web content development, client-side/server-side scripting and network security configuration, among other tasks.
+                            In a broader sense, web development encompasses all the actions, updates, and operations required to build, maintain and manage a website to ensure its performance, user experience, and speed are optimal.
+                            It might also, but not necessarily, include all those strategic actions needed to ensure its proper ranking on search engine results. Usually, those tasks pertain to a different specialization, namely search engine optimization (SEO)
+                            Web development is also known as website development, while the professionals that maintain a website are called web developers or (more commonly) web devs.
+                            </p>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane tab-pane-custom fade" id="pills-Six-code-features-example2" role="tabpanel" aria-labelledby="pills-Six-code-features-example2-tab">
+                        <img class="img-fluid mb-4 " src="/assets/img/What-We-Do/Services-Tab/6.jpg" alt="Image Description">
+                        <p class="description">Commercials are usually broadcast on television or radio. Business owners may also run commercials on Internet videos or podcasts, which include cell phones and other hand-held devices. Ads are typically considered print media.
+                        </p>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane tab-pane-custom fade" id="pills-Seven-code-features-example2" role="tabpanel" aria-labelledby="pills-Seven-code-features-example2-tab">
+                        <img class="img-fluid mb-4 " src="/assets/img/What-We-Do/Services-Tab/7.jpg" alt="Image Description">
+                        <p class="description">We have a broad experience in packaging regulations and specifications for different products. We blend this experience with our design acumen to entice customers with a product design that not only looks good but also pronounces product benefits and brand value, and results in winning a sale for you! . Commercial advertisement means an advertising message designed for delivery through a motion picture film or video medium to attract the attention of consumers ...
+
+
+                        </p>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane tab-pane-custom fade" id="pills-Eight-code-features-example2" role="tabpanel" aria-labelledby="pills-Eight-code-features-example2-tab">
+                        <img class="img-fluid mb-4 " src="/assets/img/What-We-Do/Services-Tab/8.jpg" alt="Image Description">
+                        <p class="description">Signage is any kind of graphic display intended to convey information to an audience. Good signage, however, is an almost transformative factor that enhances your experiences of how you navigate a space or how you perceive a brand. It's easy to forget just how ubiquitous signs are in our everyday life – and yet, sometimes we don't notice them we truly need them! In general, they serve several common purposes: to promote, identify, provide information, give directions or to raise safety awareness.
+                        </p>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane tab-pane-custom fade" id="pills-Nine-code-features-example2" role="tabpanel" aria-labelledby="pills-Nine-code-features-example2-tab">
+                        <img class="img-fluid mb-4 " src="/assets/img/What-We-Do/Services-Tab/9.jpg" alt="Image Description">
+                        <p class="description">We bring worth to every rupee you allocate to your marketing events. From Effective Design to Precise Fabrication; from Time bound Execution to Efficient Service throughout the show; we ensure your invitees take home a memorable experience and come back with a demand for your Product or Service.
+                        </p>
+                        </ul>
+                    </div>
+
+                    
+
+
+                </div>
+                <!-- End Tab Content -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Features Section -->
+
+<!-- SVG Bottom Shape -->
+{% comment %} <figure>
+    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="64px" viewBox="0 0 1921 273" style="margin-bottom: -8px; enable-background:new 0 0 1921 273;" xml:space="preserve">
+        <polygon fill="#f9fbff" points="1921,0 0,0 0,273 " />
+    </svg>
+</figure> {% endcomment %}
+
+<!-- End SVG Bottom Shape -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- What We Do || Defining Work Procedure ---------------------------------------------------------------------------------------------------- -->
+
+<div id="frame-2" class="overflow-hidden">
+    <div class="container space-2 space-bottom-lg-4 position-relative">
+        <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+            <span class="d-block  font-weight-bold text mb-2" style="font-size:35px;color:black;font-weight:bold;">What we do?</span>
+            <span class="d-block  font-weight-bold text mb-2" style="font-size:20px;">Define Procedure?</span>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="row mx-n2 ">
+                <!-- Card 1  -->
+                <div class="col-sm-6 col-md-4 define-pro-card mb-4 ">
+                    <div class="card card-frame h-100">
+                        <a class="card-body ">
+                            <div class="media">
+                                <figure class="w-100 max-w-6rem mr-3 home-service-icon ">
+                                    <i class="fas fa-business-time"></i>
+                                </figure>
+                                <div class="media-body ">
+                                    <div class="d-flex align-items-center ">
+                                        <span class="d-block text-dark font-weight-bold ">Briefing</span>
+                                    </div>
+                                    <small class="d-block text-body ">The advertiser needs to brief about the product or the service</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2  -->
+                <div class="col-sm-6 col-md-4 define-pro-card mb-4 ">
+                    <div class="card card-frame h-100">
+                        <a class="card-body ">
+                            <div class="media ">
+                                <figure class="w-100 max-w-6rem mr-3 home-service-icon ">
+                                    <i class="fas fa-object-group"></i>
+                                </figure>
+                                <div class="media-body ">
+                                    <div class="d-flex align-items-center ">
+                                        <span class="d-block text-dark font-weight-bold ">Knowing the Objective</span>
+                                    </div>
+                                    <small class="d-block text-body ">what message is to be delivered to the audience?</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3  -->
+                <div class="col-sm-6 col-md-4 define-pro-card mb-4 ">
+                    <div class="card card-frame h-100">
+                        <a class="card-body ">
+                            <div class="media ">
+                                <figure class="w-100 max-w-6rem mr-3 home-service-icon ">
+                                    <i class="fab fa-researchgate "></i>
+                                </figure>
+                                <div class="media-body ">
+                                    <div class="d-flex align-items-center ">
+                                        <span class="d-block text-dark font-weight-bold ">Research</span>
+                                    </div>
+                                    <small class="d-block text-body ">Step involves finding out the market behaviour, knowing the competitors, what type of advertising.</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-sm-6 col-md-4 define-pro-card mb-4 ">
+                    <div class="card card-frame h-100">
+                        <a class="card-body">
+                            <div class="media ">
+                                <figure class="w-100 max-w-6rem mr-3 home-service-icon ">
+                                    <i class="fas fa-bullseye"></i>
+                                </figure>
+                                <div class="media-body ">
+                                    <div class="d-flex align-items-center ">
+                                        <span class="d-block text-dark font-weight-bold ">Target Audience</span>
+                                    </div>
+                                    <small class="d-block text-body ">To identify the target consumers most likely to buy the product or service</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Card 5 -->
+                <div class="col-sm-6 col-md-4 define-pro-card mb-4 ">
+                    <div class="card card-frame h-100">
+                        <a class="card-body ">
+                            <div class="media ">
+                                <figure class="w-100 max-w-6rem mr-3 home-service-icon ">
+                                    <i class="fab fa-creative-commons"></i>
+                                </figure>
+                                <div class="media-body ">
+                                    <div class="d-flex align-items-center ">
+                                        <span class="d-block text-dark font-weight-bold ">Designing and Creating the Ad</span>
+                                    </div>
+                                    <small class="d-block text-body ">first the design that is the outline of ad on papers is made by the copywriters of the agency</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Card 6 -->
+                <div class="col-sm-6 col-md-4 define-pro-card mb-4 ">
+                    <div class="card card-frame h-100">
+                        <a class="card-body ">
+                            <div class="media ">
+                                <figure class="w-100 max-w-6rem mr-3 home-service-icon ">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </figure>
+                                <div class="media-body ">
+                                    <div class="d-flex align-items-center ">
+                                        <span class="d-block text-dark font-weight-bold ">Perfection</span>
+                                    </div>
+                                    <small class="d-block text-body ">Ad is redefined to make it perfect to enter the market.</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Card 7 -->
+                <div class="col-sm-6 col-md-4 define-pro-card mb-4 ">
+                    <div class="card card-frame h-100">
+                        <a class="card-body ">
+                            <div class="media ">
+                                <figure class="w-100 max-w-6rem mr-3 home-service-icon ">
+                                    <i class="fab fa-bandcamp"></i>
+                                </figure>
+                                <div class="media-body ">
+                                    <div class="d-flex align-items-center ">
+                                        <span class="d-block text-dark font-weight-bold ">Execution</span>
+                                    </div>
+                                    <small class="d-block text-body ">Finally, the advertisement is released with perfect creation, perfect placement and perfect timing in the market.</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- End Icon Blocks Section -->
+
+{% endblock content %}

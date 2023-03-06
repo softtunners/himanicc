@@ -1,0 +1,172 @@
+{% comment %} {% include 'html/base.html' %} {% block content %} {%block head %}
+<title>Himani'sCC || Blogs </title>{% endblock head %}
+
+
+<style>
+    .blog-img {
+        width: 100%;
+        height: 180px;
+    }
+    .btn-custom: hover{
+        background-color:black !important;
+
+    } 
+    .input-group{
+        margin: auto;
+
+    }
+  
+  
+    @media(max-width: 1200px){
+        .banner-custom{
+            height:55vh !important;
+            width:containt;
+        }
+        .containt-custom{
+            margin-top:-2%;
+        }
+    }
+    @media( min-width:400px, max-width:800px){
+        .banner-custom{
+            height: 45vh !important;
+            width:containt;
+        }
+        .containt-custom{
+            margin-top:-15%;
+        }
+        .blog-custom{
+            font-size: 22px !important;
+
+        }
+      
+    }
+    
+</style>
+
+
+<!-- Articles Section -->
+<div class="container">
+        <!-- Title -->
+        <div class=" mx-md-auto mb-5 mb-md-9">
+            <h2 class="h1">All Mail Formates</h2>
+        </div>
+    <!-- End Title -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row mx-n2 mb-5 mb-md-9">
+
+
+                {% for mail in all_mail_formate_list %}
+
+                <div class="col-sm-6 col-lg-3 px-2 mb-3 mb-lg-0">
+                    <!-- Card -->
+                    <a class="card h-100 transition-3d-hover" href="{% url 'mailcontent' mail.id %}">
+                        
+                        <div class="card-body">
+                            <span class="d-block small font-weight-bold text-cap mb-2">{{mail.group_name}}</span>
+                            <h5 class="mb-0">{{mail.subject}}</h5>
+
+                        </div>
+                    </a>
+                    <!-- End Card -->
+                </div>
+
+
+                {% endfor %}
+
+
+            </div>
+
+
+
+            <!-- Pagination Code starts from Here -->
+
+
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}
+ {% endcomment %}
+
+
+{% include 'html/base.html' %} {% block content %} {%block head %}
+<title>Himani'sCC || ScrapBook </title>{% endblock head %}
+<style>
+    .card-mb-3 {
+        margin: 1rem 0;
+    }
+    .card-body:hover{
+        border: 2px solid;
+
+    }
+    .connect:hover{
+        background-color:#007bb6 !important;
+        border: 1px solid #007bb6 !important;
+        color:white;
+        box-shadow: none !important;
+    }
+</style>
+<div class="js-slide  bg-img-hero space-3 " >
+
+{% comment %} <div class="bg-primary bg-img-hero banner-everywhere" style="background-image: url(/assets/img/scrapbook/ScrapBook.jpg);"> {% endcomment %}
+
+</div>
+<!-- End Hero Section -->
+
+<div class="counter-section-main d-flex justify-content-center w-100">
+    <div class="card bg-img-hero bg-navy text-white text-center p-4 my-4 rounded" style="background-color:#007bb6">
+        <!-- Form -->
+        <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <h2 class="text-white mb-0 h2">Let's Connect to know more</h2>
+            </div>
+            <div class="col-lg-5 text-lg-right">
+                <a class="btn btn-text-secondary btn-wide btn-soft-navy mx-1 bordered-element-light text-white" href="tel:9769210723">Call us</a>
+                <a class="btn btn-light btn-wide bordered-element-light mx-1 connect " href="{% url 'contact' %}">Connect Now</a>
+            </div>
+        </div>
+        <!-- End Form -->
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: -8%;">
+    {% comment %} <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+        <h2 class="h1">Scrapbook </h2>
+        <p>Have a look at our best, check-in .</p>
+    </div> {% endcomment %}
+    <div class="row mx-n2">
+        {% for i in all_mail_formate_list %}
+        <div class="col-sm-6 col-md-4 px-2 mb-md-0 card-mb-3">
+            <a class="card card-frame h-100" href="{% url 'mailcontent' i.id %}">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-1">
+                        <span class="d-block text-dark font-weight-bold">{{i.subject}}</span>
+                    </div>
+                    
+                    <span class="d-block text-body font-size-1">{{i.group_name}}</span>
+                </div>
+            </a>
+        </div>
+    
+        {% endfor %}
+
+        
+
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock content %}
