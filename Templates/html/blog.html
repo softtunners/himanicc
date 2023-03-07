@@ -1,7 +1,4 @@
-{% load static %}
-
 {% include 'html/base.html' %} {% block content %} {%block head %}
-
 <title>Himani'sCC || Blogs </title>{% endblock head %}
 
 
@@ -137,7 +134,7 @@
                     <!-- Card -->
                     <a class="card h-100 transition-3d-hover" href="{% url 'blog' blog.post_id %}">
                         
-                        <img src="{% static '../media/{{blog.thumbnail}}' %}" class="blog-img" alt="Image Description">
+                        <img src="../../media/{{blog.thumbnail}}" class="blog-img" alt="Image Description">
                         <div class="card-body">
                             <span class="d-block small font-weight-bold text-cap mb-2">{{blog.category}}</span>
                             <h5 class="mb-0">{{blog.title}}</h5>
@@ -191,7 +188,7 @@
 <div class='d-flex justify-content-center w-100' style="background-color: #f7f7f7;display:flex;margin-bottom:4% !important; margin: auto;">
     <div class="subscribe-custom">
         <div class=" text-center  mb-4 mt-4 ">
-            <h2 class="h1">GET IN TOUCH : </h2>
+            <h2 class="h1">Get IN TOUCH : </h2>
             
         </div>
         <div class=" d-flex justify-content-center">
