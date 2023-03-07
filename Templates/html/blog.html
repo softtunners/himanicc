@@ -1,4 +1,7 @@
+{% load static %}
+
 {% include 'html/base.html' %} {% block content %} {%block head %}
+
 <title>Himani'sCC || Blogs </title>{% endblock head %}
 
 
@@ -134,7 +137,7 @@
                     <!-- Card -->
                     <a class="card h-100 transition-3d-hover" href="{% url 'blog' blog.post_id %}">
                         
-                        <img src="../../media/{{blog.thumbnail}}" class="blog-img" alt="Image Description">
+                        <img src="{% static '../media/{{blog.thumbnail}}' %}" class="blog-img" alt="Image Description">
                         <div class="card-body">
                             <span class="d-block small font-weight-bold text-cap mb-2">{{blog.category}}</span>
                             <h5 class="mb-0">{{blog.title}}</h5>
