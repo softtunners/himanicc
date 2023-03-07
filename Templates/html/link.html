@@ -6,11 +6,14 @@
 <head>
     <!-- Title -->
 
-    {%block title %} {% endblock title %}
     <!-- Required Meta Tags Always Come First -->
+    {%block title %} {% endblock title %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta property="og:image" content="../../media/{{blog.thumbnail}}"/>
+	
+    
+    
+    <meta property="og:image" content="../../media/{{blog.thumbnail}}"/>
     <meta property="og:title" content="{{ blog.title }}">
     <meta property="og:description" content="{{ blog.description }}">
     <meta property="og:image" content="{{ blog.thumbnail.url }}">

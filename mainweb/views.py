@@ -48,7 +48,7 @@ def get_prev_next(id):
 
 
 def home(request):
-    allblogs = Post.objects.filter(post_now=True).reverse()[:4]
+    allblogs = Post.objects.filter(post_now=True)[:4]
     blogs=[]
     form = ContactForm
     for p in allblogs :
@@ -155,7 +155,7 @@ def blogMain(request):
 
         page = request.GET.get('page', 1)
 
-        paginator = Paginator(blogs, 2)
+        paginator = Paginator(blogs, 6)
         try:
             blogs = paginator.page(page)
         except PageNotAnInteger:
