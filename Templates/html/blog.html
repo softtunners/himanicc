@@ -54,7 +54,6 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="text-left mx-lg-auto">
-                    <h1 class="text mb-0">Read our latest Blogs</h1>
                 </div>
             </div>
             <div class="col-md-3">
@@ -94,7 +93,7 @@
         <div class="">
             <div class="">
                 <div class="mb-3">
-                    <h3 class="text">Tags</h3>
+                    <h3 class="text">Tags:</h3>
                 </div>
                 <form action="{% url 'blogs'%}">
                     {% for tag in tags %}
@@ -119,8 +118,7 @@
 <div class="container">
     <!-- Title -->
     <div class=" mx-md-auto mb-5 mb-md-9">
-        <h2 class="h1">Best Contents Daily</h2>
-        <p>We've helped some great companies brand, design and get to market.</p>
+     
     </div>
     <!-- End Title -->
     <div class="row">
@@ -187,34 +185,29 @@
 
 <div class='d-flex justify-content-center w-100' style="background-color: #f7f7f7;display:flex;margin-bottom:4% !important; margin: auto;">
     <div class="subscribe-custom">
-        <div class=" text-center  mb-4 mt-4 ">
-            <h2 class="h1">Get IN TOUCH : </h2>
-            
-        </div>
-        <div class=" d-flex justify-content-center">
-            <div class=w-60>
-
-                <p>
-                    Get expert unlimited marketing tips on Brand Awareness | Brand Marketing | Brand Visibility  straight to your inbox, and become a Best business man. 
-                    Subscribe to the Marketing Blog below.</p>
-            </div>
-
-            <div class="w-10" style="">
-                <form class="js-validate" action="{% url 'subscribe' %}">
-                    <div style="display:flex">
-                        <div class="col-sm col-md-6 col-lg mb-2 mt-0">
-                            <div class="js-form-message">
-                                <label class="sr-only" for="signupSrEmailExample1">Your email</label>
-                                <div class="input-group">
-                                    <input type="email" class="form-control bordered-element-light" style="background-color: #f7f7f7; height: 51px;" name="email" placeholder="Your email " required>
-                                </div>
+        <div class=" text-center  mb-4 mt-4 d-flex">
+            <span class="h2 d-flex ">To Our <h1>Newsletter </h1></span>
+            <form class="js-validate" action="{% url 'subscribe' %}">
+                <div style="display:flex">
+                    <div class="col-sm col-md-6 col-lg mb-2 mt-0">
+                        <div class="js-form-message">
+                            <label class="sr-only" for="signupSrEmailExample1">Your email</label>
+                            <div class="input-group">
+                                <input type="email" class="form-control bordered-element-light" style="background-color: #f7f7f7; height: 51px;" name="email" placeholder="Your email " required>
                             </div>
                         </div>
-                        <div class="col-sm-auto">
-                            <button type="submit" class="btn btn-primary btn-block bordered-element-light">Subscribe</button>
-                        </div>
                     </div>
-                </form>
+                    <div class="col-sm-auto " style="  margin-left: -31px;
+                    ">
+                        <button type="submit" class="btn btn-primary btn-block bordered-element-light">Subscribe</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class=" d-flex justify-content-center">
+
+            <div class="w-100" style="">
+               
             </div>
         </div> 
 

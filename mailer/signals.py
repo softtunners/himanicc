@@ -5,6 +5,7 @@ from django.dispatch import receiver
 from mailer.models import *
 import pandas as pd
 from django.shortcuts import get_object_or_404
+from django.template.loader import get_template
 
 @receiver(post_save,sender=Excel_file)
 def extract_data(sender,instance,created,**kwargs):
@@ -20,8 +21,6 @@ def extract_data(sender,instance,created,**kwargs):
     except:
          pass
     
-
-    print(df.head(0))
     for i in range(len(df)):
         gid_value = instance.gid
         excel_file_instance = Excel_file.objects.get(gid=gid_value)
@@ -35,6 +34,9 @@ def send_email_to_new_user(sender, instance, created, **kwargs):
             # Send email using SMTP server
             mail_content = get_object_or_404(EMail_container,group_name=instance.group_name)
             print(mail_content,instance.email)
+
+            htmly     = get_template('html/email.html')
+
             subject = mail_content.subject
             from_email = 'hrithikhadawale73@gmail.com'
             html_message = mail_content.message

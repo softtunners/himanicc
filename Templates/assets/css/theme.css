@@ -573,7 +573,7 @@ mark,
 }
 
 .img-fluid {
-    max-width: 100%;
+    max-width: 157%;
     height: auto;
 }
 
@@ -21031,7 +21031,7 @@ label.btn {
     width: 0.9375rem;
     height: 0.9375rem;
     box-sizing: border-box;
-    background-color: #007bb6;
+    background-color: black;
     border: 0.1875rem solid transparent;
     border-radius: 50%;
     -webkit-transform: scale(0.6);
@@ -21041,7 +21041,7 @@ label.btn {
 
 .slick-pagination li.slick-active span {
     background-color: transparent;
-    border-color: #007bb6;
+    border-color: white;
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
 }

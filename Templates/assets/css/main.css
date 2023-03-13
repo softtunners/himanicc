@@ -306,8 +306,8 @@
     font-size: 24px!important;
 }
 
-.footer-social {
-    padding-right: 20px;
+.footer-social{
+    margin: 0px 103px;
     justify-content: space-around!important;
 }
 

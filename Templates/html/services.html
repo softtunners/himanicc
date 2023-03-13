@@ -19,6 +19,18 @@
             height: auto;
         }
     }
+
+
+    .heading-animation{
+            background-color: #ffffff8a;
+            animation-name: example;
+            animation-duration: 3s;
+          }
+          
+          @keyframes example {
+            from {background-color: #007bb6;}
+            to {background-color: #ffffff8a;}
+          }
 </style>
 <title>Himani'sCC || What-We-Do </title>{% endblock head %}
 
@@ -31,7 +43,7 @@
 {% comment %} <div class="bg-primary bg-img-hero" style="background-image: url(/assets/img/services/Services.jpg);"> {% endcomment %}
     <div class="container space-2 space-lg-3">
         <div class="w-lg-65 text-center mx-lg-auto">
-            <h1 class="text-dark mb-0">Our Design Studio in Action</h1>
+            <h1 class="text-dark mb-0 heading-animation" >Our Design Studio in Action</h1>
             <p class="description text-white" style="font-size:22px;font-weight:800;">Let's Work together to create game-changing experiences that will take your brand to next level.</p>
         </div>
     </div>
@@ -93,7 +105,8 @@
 <!-- End SVG Top Shape -->
 
 <!-- Features Section -->
-<div id="frame-1" style="background-color:#e3e7ed">
+<div id="frame-1" style="background-color:#e3e7ed;    margin-top: -10%;
+">
     <div class="container  space-lg-3">
         <!-- Title -->
         <div class="w-md-80 w-lg-50  text-center mx-md-auto mb-5 mb-md-9">

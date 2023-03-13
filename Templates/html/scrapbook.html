@@ -4,47 +4,47 @@
     .card-mb-3 {
         margin: 1rem 0;
     }
+    .heading-scrapbook{
+        margin-top:16%;
+    }
+    .card-scrap{
+        margin-top:-74px
+    }
 </style>
 <div class="js-slide  bg-img-hero space-3 " style="height: 70vh;opacity:1; background-image: url(/assets/img/scrapbook/ScrapBook.jpg);">
 
 {% comment %} <div class="bg-primary bg-img-hero banner-everywhere" style="background-image: url(/assets/img/scrapbook/ScrapBook.jpg);"> {% endcomment %}
-    <div class="">
-        <div class="w-lg-65 text-center mx-lg-auto">
-
-            <h2 class="text mb-0">Updating soon....</h2>
-                <h2 class="text mb-0"> P O R T F O L I O</h2>
-                <h3 class="text mb-0">   We are streamlining our product portfolio.</h3>
+    <div class="counter-section-main d-flex justify-content-center w-100 heading-scrapbook">
+        <div class="card bg-img-hero bg-navy text-white text-center p-4 my-4 rounded" style="background-color:#007bb6">
+            <!-- Form -->
+            <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="text-white mb-0 h2">Get best of our Services, Connect with us today</h2>
+                </div>
+                <div class="col-lg-5 text-lg-right">
+                    <a class="btn btn-text-secondary btn-wide btn-soft-navy mx-1 bordered-element-light text-white" href="tel:9769210723">Call us</a>
+                    <a class="btn btn-light btn-wide bordered-element-light mx-1 connect " href="{% url 'contact' %}">Connect Now</a>
+                </div>
+            </div>
+            <!-- End Form -->
         </div>
     </div>
 </div>
 <!-- End Hero Section -->
 
-<div class="counter-section-main d-flex justify-content-center w-100">
-    <div class="card bg-img-hero bg-navy text-white text-center p-4 my-4 rounded" style="background-image: url(../../assets/svg/components/abstract-shapes-1.svg);">
-        <!-- Form -->
-        <div class="row justify-content-lg-between align-items-lg-center text-center text-lg-left">
-            <div class="col-lg-5 mb-5 mb-lg-0">
-                <h2 class="text-white mb-0 h3">Get best of our Services, Connect with us today</h2>
-            </div>
-            <div class="col-lg-5 text-lg-right">
-                <a class="btn btn-text-secondary btn-wide btn-soft-navy mx-1 bordered-element-light text-white" href="tel:9769210723">Call us</a>
-                <a class="btn btn-light btn-wide bordered-element-light mx-1 " href="{% url 'contact' %}">Get Quote</a>
-            </div>
-        </div>
-        <!-- End Form -->
-    </div>
-</div>
 
 
-<div class="container" style="margin-top: -8%;">
+
+
+<div class="container" >
     {% comment %} <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
         <h2 class="h1">Scrapbook </h2>
         <p>Have a look at our best, check-in .</p>
     </div> {% endcomment %}
     <div class="row mx-n2">
         {% for i in models %}
-        <div class="col-sm-6 col-md-4 px-2 mb-md-0 card-mb-3">
-            <a class="card card-frame h-100" href="{% url 'Gallery' i.id %}">
+        <div class="col-sm-6 col-md-3 px-2 card-mb-3 card-scrap">
+            <a class="card card-frame h-80" href="{% url 'Gallery' i.id %}">
                 <img class="" src="../../media/{{i.thumbnail}}" alt="Image Description" style="height: 43%;">
                 <div class="card-body">
                     <div class="d-flex align-items-center mb-1">
