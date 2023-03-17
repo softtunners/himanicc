@@ -320,9 +320,9 @@ def carrier(request):
     jobs = JobsPositions.objects.all().order_by('-id')
   
     today =  date.today()
-    
+    skills = Skills.objects.all()
 
-    return render(request, "html/carrier.html",{'jobs':jobs,'today':today})
+    return render(request, "html/carrier.html",{'jobs':jobs,'today':today,'skills':skills})
 
 
 

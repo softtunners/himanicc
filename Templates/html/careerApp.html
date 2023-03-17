@@ -7,19 +7,39 @@
 
 
 
-
+<style>
+    body{
+        font-family:montserrat !important;
+    }
+</style>
 <!-- End Hero Section -->
 <section class="blog-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-9  space-top-3 space-bottom-2">
+            <div class="col-md-13 justify-content-center space-top-3 space-bottom-2">
                 <div class=" mx-lg-auto">
                     <h3>{{job.job_title}}</h3>
                     <div class="mt-5">
 
                             {% for tag in job.skills.all %}
                             <button class="btn btn-xs btn-soft-secondary mb-1 bordered-element-light" name="tag"  value="{{tag.slug}}">{{tag}}</button> {% endfor %}
+                            <div class=" mb-sm-0">
 
+                                <div class="d-flex align-items-center">
+    
+                                    <span class="d-block small font-weight-bold text-cap mr-2">Share:</span>
+    
+                                    <button class="btn btn-share twitter-i">{% post_to_twitter b.title b "<i class='fab fa-twitter'></i>" %}</button>
+                                    <button class="btn btn-share linkedin-i"><a href="http://www.linkedin.com/shareArticle?url={{request.get_host}}{{ request.get_full_path }}" target="_blank"><i class="fab fa-linkedin"></i></a></button>
+                                    <button class="btn btn-share facebook-i">{% post_to_facebook  b.get_absolute_url "<i class='fab fa-facebook'></i>" %}</button>
+                                    <button class="btn btn-share email-i">{% send_email b.title "New Song: {{b.title}}. Check it out!" b "<i class='fas fa-envelope'></i>" %}</button>
+                                    <button class="btn btn-share whatsapp-i">{% post_to_whatsapp b "<i class='fab fa-whatsapp'></i>" %}</button>
+                                    <button class="btn btn-share share-i clipboard"><i class='fas fa-link'></i></button>
+                                    <p class="copied"></p>
+    
+                                </div>
+                                
+                            </div>
 
                     </div>
                     <div class="mb-4">
@@ -28,44 +48,14 @@
                 </div>
 
 
-
-
-
                 <div class="w-lg-100 mx-lg-auto">
 
-                    <!-- Tags -->
-                    {% comment %} <div class="mt-5">
-                        <form action="{% url 'blogs'%}">
-
-                            {% for tag in blog.tags.all %}
-                            <button class="btn btn-xs btn-soft-secondary mb-1 bordered-element-light" name="tag" type="submit" value="{{tag.slug}}">{{tag}}</button> {% endfor %}
-
-                        </form>
-
-                    </div> {% endcomment %}
-
-                    <!-- End Badges -->
+           
 
                     <!-- Share -->
                     <div class="row justify-content-sm-between align-items-sm-center mt-5">
 
-                        <div class="col-sm-6 mb-2 mb-sm-0">
-
-                            <div class="d-flex align-items-center">
-
-                                <span class="d-block small font-weight-bold text-cap mr-2">Share:</span>
-
-                                <button class="btn btn-share twitter-i">{% post_to_twitter b.title b "<i class='fab fa-twitter'></i>" %}</button>
-                                <button class="btn btn-share linkedin-i"><a href="http://www.linkedin.com/shareArticle?url={{request.get_host}}{{ request.get_full_path }}" target="_blank"><i class="fab fa-linkedin"></i></a></button>
-                                <button class="btn btn-share facebook-i">{% post_to_facebook  b.get_absolute_url "<i class='fab fa-facebook'></i>" %}</button>
-                                <button class="btn btn-share email-i">{% send_email b.title "New Song: {{b.title}}. Check it out!" b "<i class='fas fa-envelope'></i>" %}</button>
-                                <button class="btn btn-share whatsapp-i">{% post_to_whatsapp b "<i class='fab fa-whatsapp'></i>" %}</button>
-                                <button class="btn btn-share share-i clipboard"><i class='fas fa-link'></i></button>
-                                <p class="copied"></p>
-
-                            </div>
-                            
-                        </div>
+                       
                         <div class="card-body p-4 p-md-7 " id="jobAppForm">
                             <div class="mb-4 ">
                                 <h2>Apply Now </h2>
@@ -76,13 +66,13 @@
                                 {% csrf_token%} 
                                 <div class="row mx-n2 ">
                                     <div class="col-sm-6 px-2 ">
-                                        <div class="js-form-message form-group ">
+                                        <div class="js-form-message form-group " >
                                             <label for="">Postion:</label>
-                                               <input class="form-control" disabled type="text" value="{{job.job_title}}"> 
+                                               <input class="form-control"style="border-color:#007bb6;" disabled type="text" value="{{job.job_title}}"> 
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-6 px-2 ">
+                                    <div class="col-sm-6 px-2 mt-2">
                                         <div class="js-form-message form-group ">
                                             <label for=""></label>    
                                             {{candidateform.name}}
@@ -107,72 +97,22 @@
                                             <div class="js-form-message form-group ">
                                                 {{candidateform.additional_info}}
                                             </div>
-                                            <label >Resume: </label>
-                                             {{candidateform.resume}} 
-                                            {% comment %} <input type="file" name="resume"> {% endcomment %}
+                                            <div class="js-form-message  d-flex form-group ">
+                                                <div class="mr-10 m-1">
+
+                                                    <label class="mr-6">Resume: </label>
+                                                    
+                                                    {{candidateform.resume}} 
+                                                </div>
+
+                                             <button type="submit " style="margin-left:10%" class="btn w-20 btn-block btn-primary ">Submit</button>
+                                            </div>
+                                             {% comment %} <input type="file" name="resume"> {% endcomment %}
                                         </div>
                                     </div>
                                 </div>
 
-                                <button type="submit " class="btn btn-block btn-primary ">Submit</button>
                             </form>
-                        </div>
-                        <div class="mb-7">
-                            <div class="mb-3">
-                                <h3>Recent Jobs</h3>
-                            </div>
-
-                            <!-- Blog -->
-                            <div class="col-md-9 d-f ">
-                                <br>
-                                {% for job in jobs %}
-                                {% if job.expirydate > today %}
-                                 <span style='color:green;'>Application Expiray Date : {{job.expirydate}}</span>
-                                <a class="card card-frame mb-3 job-card " href="#modal" data-toggle="modal" data-target="#exampleModal" onclick="myFunction({{ forloop.counter }})" >
-                                    <div class="row align-items-sm-center ">
-                                        <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
-                                           {{job.job_title}}
-                                        </span>
-                                        <span class="col-6 col-sm-3 text-body ">
-                                            {{job.location}}
-                                        </span>
-                                        <span class="col-6 col-sm-3 text-right" href="{% url 'careerApp' job.id %}">
-                                            Apply <i class="fas fa-angle-right fa-sm ml-1"></i>
-                                        </span>
-                                    </div>
-                                </a>
-                                <span class="col-6 col-sm-3 text-body " id= "description{{ forloop.counter }}" style="display:none;">
-                                    {{job.description | safe}}   
-                                </span>
-                              
-                                
-                                {% else %}
-                                <span style='color:red'>Application Closed: {{job.expirydate}}</span>
-                                <a class="card card-frame mb-3 job-card " href="{% url 'contact' %}"  >
-                                    <div class="row align-items-sm-center ">
-                                        <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
-                                           {{job.job_title}}
-                                        </span>
-                                        <span class="col-6 col-sm-3 text-body ">
-                                            {{job.location}}
-                                        </span>
-                                      
-                                        <span class="col-6 col-sm-3 text-right" >
-                                            Enquiry <i class="fas fa-angle-right fa-sm ml-1 "></i>
-                                        </span>
-                                    </div>
-                                </a>
-                                <span class="col-6 col-sm-3 text-body " id= "description{{ forloop.counter }}" style="display:none;">
-                                    {{job.description | safe}}   
-                                </span>
-                                {% endif %}
-                                {% endfor %}
-                
-                                
-                                
-                
-                            </div>                            <!-- End Blog -->
-
                         </div>
 
                         <script>
@@ -197,48 +137,19 @@
 
                 </div>
             </div>
-
+{% comment %} 
             <div class="col-md-3 space-3">
                 <div class="row">
                     <div class="container">
                         <div class="mb-7">
-                            <div class="mb-3">
-                                <h3>Filter Jobs</h3>
-                            </div>
-                            {% comment %} <form action="{% url 'blogs'%}"> {% endcomment %}
-                                <div class="filter-search">
-
-                                    <div class="filter-gap filter-search-Cat">
-                                        <select class="bordered-element-light form-control custom-select text-muted" name='categoryName' data-msg="Please select country.">
-                                            <option value="">Select Skills</option>
-                                            {% for skill in skills %}
-                                            <option value="{{skill}}">{{skill}}</option>
-                                            {% endfor %}
-
-                                        </select>
-                                    </div>
-                                    {% comment %} 
-                                    <div class="filter-gap filter-search-Year">
-                                        <select class="bordered-element-light form-control custom-select text-muted" name='year' data-msg="Please select country.">
-                                            <option value="">Select</option>
-                                            {% for yr in post_year %}
-                                            <option value="{{yr}}">{{yr}}</option>
-                                            {% endfor %}
-
-                                        </select>
-                                    </div> {% endcomment %}
-
-                                    <button class="w-100 btn bordered-element-light himani-btn" type="submit">Search</button>
-                                </div>
-                            {% comment %} </form> {% endcomment %}
-
+   
                         </div>
 
 
                      
                         <!-- Sticky Block Start Point -->
                 </div>
-            </div>
+            </div> {% endcomment %}
         </div>
     </div>
 

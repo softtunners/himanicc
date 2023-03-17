@@ -37,10 +37,10 @@ class ContactForm(forms.ModelForm):
   
 
 class CandidateForm(forms.ModelForm):
-    name=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Full Name"}))
-    email=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Email"}))
-    phone_no=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Phone Number"}))
-    additional_info=forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','placeHolder':"Additional Information"}))
+    name=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Full Name",'style':'border-color:#007bb6'}))
+    email=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Email",'style':'border-color:#007bb6'}))
+    phone_no=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Phone Number",'style':'border-color:#007bb6'}))
+    additional_info=forms.CharField(widget=forms.Textarea(attrs={'class':'form-control','placeHolder':"Additional Information",'style':'border-color:#007bb6'}))
     resume=forms.FileField()
     class Meta:
         model= Candidates
