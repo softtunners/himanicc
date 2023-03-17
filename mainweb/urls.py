@@ -17,5 +17,6 @@ urlpatterns = [
     path('blog-settings',blogsettingsview,name='blog-settings'),
     path('profiledetails', prashant, name='profiledetails'),
     path("like_post/<int:pk>", LikeView, name="like_post"),
-    path("career", carrier, name="career")
+    path("career", carrier, name="career"),
+    path(r'career/(?P<slug>[-a-zA-Z0-9_]+)\\Z', careerApp, name="careerApp")
 ]

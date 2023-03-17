@@ -1,4 +1,6 @@
-{% include 'html/base.html' %} {% block content %} {%block head %}
+{% include 'html/base.html' %}
+
+{% block content %} {%block head %}
 <title>Himani'sCC || Carrier </title>{% endblock head %}
 
 
@@ -83,10 +85,10 @@
 
         <div class="counter-section-main-career justify-content-center w-70 ">
                         <p class='heading-career' style="font-size: 15px;    text-align: center;
-                        font-weight: 700;">At himanis' CC, We seek hard-working, self starterst to join our family of collabaration and ambitions industry professionals.</p>
+                        font-weight: 700;">At Himan's CC, We seek hard-working, self-starters to join our family of collaborative and ambitious industry professionals.</p>
                         <p  class='heading-career' style="
                         font-size: 18px;    text-align: center;
-                        font-weight: 700;">Build Your Career and the future with us</p>
+                        font-weight: 700;">Build Your Career and the future with us.</p>
 
         </div>
 
@@ -120,7 +122,7 @@
                 {% for job in jobs %}
                 {% if job.expirydate >= today %}
                 <span style='color:green;'>Application Expiray Date : {{job.expirydate}}</span>
-                <a class="card card-frame mb-3 job-card " href="#modal" data-toggle="modal" data-target="#exampleModal" onclick="myFunction({{ forloop.counter }})" >
+                <a class="card card-frame mb-3 job-card " href="{% url 'careerApp' job.job_title %}" >
                     <div class="row align-items-sm-center ">
                         <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
                            {{job.job_title}}
@@ -149,7 +151,7 @@
                 <h2>Recent Job Positions :</h2>
                 <br>
                 {% for job in jobs %}
-                {% if job.expirydate >= today %}
+                {% if job.expirydate > today %}
                  <span style='color:green;'>Application Expiray Date : {{job.expirydate}}</span>
                 <a class="card card-frame mb-3 job-card " href="#modal" data-toggle="modal" data-target="#exampleModal" onclick="myFunction({{ forloop.counter }})" >
                     <div class="row align-items-sm-center ">
@@ -159,9 +161,8 @@
                         <span class="col-6 col-sm-3 text-body ">
                             {{job.location}}
                         </span>
-                      
-                        <span class="col-6 col-sm-3 text-right" data-toggle="modal" data-target="#exampleModal" id="apply">
-                            Apply <i class="fas fa-angle-right fa-sm ml-1 "></i>
+                        <span class="col-6 col-sm-3 text-right" href="{% url 'careerApp' job.id %}">
+                            Apply <i class="fas fa-angle-right fa-sm ml-1"></i>
                         </span>
                     </div>
                 </a>
@@ -201,12 +202,12 @@
 
 </div>
 
-<script>
+{% comment %} <script>
     function myFunction(x) {
     document.getElementById('position').innerText = document.getElementById('title'+x).innerText;;
     document.getElementById('jobdetails').innerHTML = document.getElementById('description'+x).innerHTML;;
     }
-</script>
+</script> {% endcomment %}
 
 
 <div class="modal fade bordered-element-light align-item-center" id="exampleModal" tabindex="-5" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -286,7 +287,7 @@
 
                                         <button type="submit " class="btn btn-block btn-primary ">Submit</button>
                                     </form>
-                                    </div>
+                                </div>
                             </div>
 
                             

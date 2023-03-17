@@ -148,11 +148,17 @@ class SubcribeUsers(models.Model):
         verbose_name = "Subscribed Users"
         verbose_name_plural = "Subscribed Users"
 
+class Skills(models.Model):
+    skill_name=models.CharField(max_length=50)
+
+    def __str__(self) -> str:
+        return self.skill_name
+
 class JobsPositions(models.Model):
     job_title = models.CharField(max_length=100)
     location = models.CharField(default="Mumbai",max_length=50)
     expirydate = models.DateField(null=False,default=now)
-
+    skills = models.ManyToManyField(Skills)
     description = RichTextField()
     class Meta:
         verbose_name = "Job Requirements"
@@ -171,3 +177,4 @@ class Candidates(models.Model):
     class Meta:
         verbose_name = "Job Enquires"
         verbose_name_plural = "job Enquires"
+

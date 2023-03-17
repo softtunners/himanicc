@@ -8,6 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('cat_title',)
     icon_name = 'apps'
 
+
 # class CommentAdmin(admin.ModelAdmin):
 #     list_display =('post','username')
 class ContactAdmin(admin.ModelAdmin):
@@ -60,3 +61,4 @@ admin.site.register(IpModel,IpModelAdmin)
 admin.site.register(BlogComment,BlogCommentAdmin)
 admin.site.register(SubcribeUsers,SubcribeUsersAdmin)
 
+admin.site.register(Skills)

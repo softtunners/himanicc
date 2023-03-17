@@ -37,7 +37,6 @@ class ContactForm(forms.ModelForm):
   
 
 class CandidateForm(forms.ModelForm):
-    job_title=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Position/Job Title"}))
     name=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Full Name"}))
     email=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Email"}))
     phone_no=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeHolder':"Phone Number"}))

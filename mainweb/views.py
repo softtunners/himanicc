@@ -317,9 +317,16 @@ def prashant(request):
 
 
 def carrier(request):
-    jobs=JobsPositions.objects.all()
+    jobs = JobsPositions.objects.all().order_by('-id')
+  
     today =  date.today()
-    candidateform = CandidateForm()
+    
+
+    return render(request, "html/carrier.html",{'jobs':jobs,'today':today})
+
+
+
+def careerApp(request,slug):
     if request.method == "POST":
         name=request.POST.get("name")
         position=request.POST.get("job_title")
@@ -335,8 +342,14 @@ def carrier(request):
             x =f'{name} Please Fill Correct Information'
 
             messages.error(request,x)
+            return redirect('careerApp',slug)
+    jobs = JobsPositions.objects.all().order_by('-id')
+    job = JobsPositions.objects.get(job_title = slug)
+    today =  date.today()
+    skills = Skills.objects.all()
+    candidateform = CandidateForm()
+    return render(request, "html/careerApp.html",{'jobs':jobs,'candidateform':candidateform,'today':today,'job':job,'skills':skills})
 
-    return render(request, "html/carrier.html",{'jobs':jobs,'candidateform':candidateform,'today':today})
 
 
-
+        
