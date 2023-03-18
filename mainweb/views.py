@@ -351,5 +351,20 @@ def careerApp(request,slug):
     return render(request, "html/careerApp.html",{'jobs':jobs,'candidateform':candidateform,'today':today,'job':job,'skills':skills})
 
 
+def skillsearch(request,slug):
+    skill = get_object_or_404(Skills,skill_name =slug)
+    jobs =JobsPositions.objects.filter(skills =skill)
+    today =  date.today()
+    skills = Skills.objects.all()
+    return render(request, "html/carrier.html",{'jobs':jobs,'today':today,'skills':skills})
 
+def skillsearch1(request):
+    skill = request.GET.get('skill')
+    skill = get_object_or_404(Skills,skill_name =skill)
+    jobs =JobsPositions.objects.filter(skills =skill)
+    today =  date.today()
+    skills = Skills.objects.all()
+    return render(request, "html/carrier.html",{'jobs':jobs,'today':today,'skills':skills})
+
+     
         

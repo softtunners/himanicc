@@ -20,9 +20,11 @@
                 <div class=" mx-lg-auto">
                     <h3>{{job.job_title}}</h3>
                     <div class="mt-5">
+                        {% for tag in job.skills.all %}
+                        <form action="{% url 'skillsearch' tag %}">
 
-                            {% for tag in job.skills.all %}
-                            <button class="btn btn-xs btn-soft-secondary mb-1 bordered-element-light" name="tag"  value="{{tag.slug}}">{{tag}}</button> {% endfor %}
+                            <button class="btn btn-xs btn-soft-secondary mb-1 bordered-element-light" name="tag"  value="{{tag}}">{{tag}}</button> {% endfor %}
+                        </form>
                             <div class=" mb-sm-0">
 
                                 <div class="d-flex align-items-center">

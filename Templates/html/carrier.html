@@ -94,13 +94,13 @@
         </div>
         <div style="width:30%;     margin-left: 20%;" >
             <div class="border-bottom pb-5 mb-9 ">
-                <form action="{% url 'career'%} " method="POST">
-                    {% csrf_token %}
-                    <div class="filter-search ">
-                        <div class="filter-gap-2 filter-search-Cat ">
-                            <h2>Filter Skills</h2>
-
-                            <select class="bordered-element form-control custom-select text-muted" name='categoryName' data-msg="Please select country." style="border-color:#007bb6 !important">
+                {% csrf_token %}
+                <div class="filter-search ">
+                    <div class="filter-gap-2 filter-search-Cat ">
+                        <h2>Filter Skills</h2>
+                        
+                        <form action="{% url 'skillsearch1' %} " method="GET">
+                        <select class="bordered-element form-control custom-select text-muted" name='skill' data-msg="Please select country." style="border-color:#007bb6 !important">
                                 <option selected value=""> -- Skills --</option>
                                 {% for skill in skills %}
                                 <option value="{{skill}}">{{skill}}</option>
