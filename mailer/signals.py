@@ -30,12 +30,12 @@ def extract_data(sender,instance,created,**kwargs):
 @receiver(post_save, sender=userinfo)
 def send_email_to_new_user(sender, instance, created, **kwargs):
     if not instance.mail_sent:
-            # Render email template
+            #  Render email template
             # Send email using SMTP server
             mail_content = get_object_or_404(EMail_container,group_name=instance.group_name)
             print(mail_content,instance.email)
 
-            htmly     = get_template('html/email.html')
+            # htmly     = get_template('html/email.html')
 
             subject = mail_content.subject
             from_email = 'hrithikhadawale73@gmail.com'
@@ -46,3 +46,4 @@ def send_email_to_new_user(sender, instance, created, **kwargs):
             # Update mail_sent flag
             instance.mail_sent = True
             instance.save()
+

@@ -18,8 +18,10 @@ urlpatterns = [
     path('profiledetails', prashant, name='profiledetails'),
     path("like_post/<int:pk>", LikeView, name="like_post"),
     path("career", carrier, name="career"),
-    path(r'career/(?P<slug>[-a-zA-Z0-9_]+)\\Z', careerApp, name="careerApp"),
-    path(r'career/skill/(?P<slug>[-a-zA-Z0-9_]+)\Z',skillsearch,name="skillsearch"),
+    path('career/<int:id>', careerApp, name="careerApp"),
+    # path(r'career/skill/(?P<slug>[-a-zA-Z0-9_]+)\Z',skillsearch,name="skillsearch"),
+        path('career/skill/<str:title>',skillsearch,name="skillsearch"),
+
     path(r'career/',skillsearch1,name="skillsearch1")
 
 ]

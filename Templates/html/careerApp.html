@@ -1,11 +1,23 @@
-{% include 'html/base.html' %} {% load social_share %} {% load humanize%} {% block content %} {%block title %}
-<title>Himani'sCC || {{job.job_title}} </title>
+{% extends 'html/base.html' %} {% load social_share %} {% load humanize%} 
+
+{% block head %}
+<title>Himani'sCC || {{job.job_title}} 
+
+</title>
+    <meta property="og:title" content="We Are Hiring - www.himanicc.com - {{ job.job_title }}">
+    <meta property="og:description" content="{{job.description | safe}}description">
+
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:type" content="job"/>
+    <meta name="robots" content="noarchive">
 
 
 
-{% endblock title %}
+
+{% endblock head %}
 
 
+{% block content %}
 
 <style>
     body{
@@ -21,9 +33,9 @@
                     <h3>{{job.job_title}}</h3>
                     <div class="mt-5">
                         {% for tag in job.skills.all %}
-                        <form action="{% url 'skillsearch' tag %}">
+                        <form action="{% url 'skillsearch' tag %}" method="GET">
 
-                            <button class="btn btn-xs btn-soft-secondary mb-1 bordered-element-light" name="tag"  value="{{tag}}">{{tag}}</button> {% endfor %}
+                            <button class="btn btn-xs btn-soft-secondary mb-1 bordered-element-light" name="tag" type="submit" value="{{tag}}">{{tag}}</button> {% endfor %}
                         </form>
                             <div class=" mb-sm-0">
 

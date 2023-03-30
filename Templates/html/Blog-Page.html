@@ -1,13 +1,20 @@
-{% include 'html/base.html' %} {% load social_share %} {% load humanize%} {% block content %} {%block title %}
+{% extends 'html/base.html' %} {% load social_share %} {% load humanize%}  {% block head %}
+
 <title>Himani'sCC || {{blog.title}} </title>
+<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{{ blog.thumbnail.url }}"/>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:title" content="{{ blog.title }}">
+<meta property="og:description" content="{{ blog.description }}">
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:type" content="article">
+
+
+{% endblock head %}
 
 
 
-{% endblock title %}
-
-
-
-
+{% block content %}
 <div class="bg-primary bg-img-hero" style="background-image: url(../../media/{{blog.thumbnail}});">
     {% comment %} <div class="bg-primary bg-img-hero" > {% endcomment %}
 

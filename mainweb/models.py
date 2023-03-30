@@ -160,6 +160,7 @@ class JobsPositions(models.Model):
     expirydate = models.DateField(null=False,default=now)
     skills = models.ManyToManyField(Skills)
     description = RichTextField()
+    created = models.DateTimeField(auto_now_add=True,null=True,blank=True)
     class Meta:
         verbose_name = "Job Requirements"
         verbose_name_plural = "Job Requirements"

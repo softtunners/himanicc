@@ -1,5 +1,23 @@
-{% include 'html/base.html' %} {% block content %} {%block head %}
-<title>Himani'sCC || ScrapBook </title>{% endblock head %}
+
+
+
+{% extends 'html/base.html' %} {% load social_share %} {% load humanize%} 
+
+{% block head %}
+<title>Himani'sCC || {{mail.subject}} 
+
+</title>
+    <meta property="og:title" content="{{mail.subject}}">
+
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:type" content="job"/>
+    <meta name="robots" content="noarchive">
+
+
+
+
+{% endblock head %}
+{% block content %}
 
 <!-- End Hero Section -->
 <section class="blog-section" style="margin:-10% !important">

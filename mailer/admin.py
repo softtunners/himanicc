@@ -3,6 +3,8 @@ from .models import *
 from django.http import HttpResponse
 import csv
 
+from django_summernote.admin import SummernoteModelAdmin
+
 def export_selected_users_to_excel(modeladmin, request, queryset):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="users.csv"'
@@ -33,6 +35,13 @@ class GroupsAdmin(admin.ModelAdmin):
     list_display=('id','group_name')
     icon_name="group_add"
 
+
+class PostAdmin(SummernoteModelAdmin):
+    summernote_fields = ('message',)
+
+admin.site.register(EMail_container, PostAdmin)
+
+
 class EmailContent(admin.ModelAdmin):
     list_display=('group_name','subject',)
     icon_name = 'email'
@@ -41,4 +50,4 @@ class EmailContent(admin.ModelAdmin):
 admin.site.register(Groups,GroupsAdmin)
 admin.site.register(userinfo,userinfoAdmin)
 admin.site.register(Excel_file,ExcelAdmin)
-admin.site.register(EMail_container,EmailContent)
+# admin.site.register(EMail_container,EmailContent)

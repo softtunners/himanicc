@@ -1,7 +1,10 @@
 {% include 'html/base.html' %}
 
-{% block content %} {%block head %}
-<title>Himani'sCC || Carrier </title>{% endblock head %}
+{% block head %}
+<title>Himani'sCC || Carrier </title>
+{% endblock head %}
+
+{% block content %} 
 
 
 <style>
@@ -125,19 +128,21 @@
             {% for job in jobs %}
             {% if job.expirydate > today %}
              <span style='color:green;'>Application Expiray Date : {{job.expirydate}}</span>
-            <a class="card card-frame mb-3 job-card " href="{% url 'careerApp' job.job_title %}">
-                <div class="row align-items-sm-center ">
-                    <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
-                       {{job.job_title}}
-                    </span>
-                    <span class="col-6 col-sm-3 text-body ">
-                        {{job.location}}
-                    </span>
-                    <span class="col-6 col-sm-3 text-right" href="{% url 'careerApp' job.id %}">
-                        Apply <i class="fas fa-angle-right fa-sm ml-1"></i>
-                    </span>
-                </div>
-            </a>
+
+                 <a class="card card-frame mb-3 job-card " href="{% url 'careerApp' job.id %}">
+                     <div class="row align-items-sm-center " >
+                         <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
+                             {{job.job_title}}
+                            </span>
+                            <span class="col-6 col-sm-3 text-body ">
+                                {{job.location}}
+                            </span>
+                            <span class="col-6 col-sm-3 text-right" href="{% url 'careerApp' job.id %}">
+                                Apply <i class="fas fa-angle-right fa-sm ml-1"></i>
+                            </span>
+                        </div>
+                    </a>
+                        </span>
             <span class="col-6 col-sm-3 text-body " id= "description{{ forloop.counter }}" style="display:none;">
                 {{job.description | safe}}   
             </span>

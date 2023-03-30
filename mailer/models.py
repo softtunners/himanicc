@@ -44,7 +44,7 @@ class userinfo(models.Model):
 class EMail_container(models.Model):
     group_name=models.ForeignKey(Groups,on_delete=models.CASCADE)
     subject =models.TextField()
-    message = RichTextField()
+    message = models.TextField()
 
     def __str__(self) -> str:
         return self.subject + ' - ' + str(self.group_name.group_name) 

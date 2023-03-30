@@ -326,7 +326,7 @@ def carrier(request):
 
 
 
-def careerApp(request,slug):
+def careerApp(request,id):
     if request.method == "POST":
         name=request.POST.get("name")
         position=request.POST.get("job_title")
@@ -342,17 +342,17 @@ def careerApp(request,slug):
             x =f'{name} Please Fill Correct Information'
 
             messages.error(request,x)
-            return redirect('careerApp',slug)
+            return redirect('careerApp',id)
     jobs = JobsPositions.objects.all().order_by('-id')
-    job = JobsPositions.objects.get(job_title = slug)
+    job = JobsPositions.objects.get(id = id)
     today =  date.today()
     skills = Skills.objects.all()
     candidateform = CandidateForm()
     return render(request, "html/careerApp.html",{'jobs':jobs,'candidateform':candidateform,'today':today,'job':job,'skills':skills})
 
 
-def skillsearch(request,slug):
-    skill = get_object_or_404(Skills,skill_name =slug)
+def skillsearch(request,title):
+    skill = get_object_or_404(Skills,skill_name =title)
     jobs =JobsPositions.objects.filter(skills =skill)
     today =  date.today()
     skills = Skills.objects.all()
