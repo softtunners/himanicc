@@ -317,7 +317,7 @@ def prashant(request):
 
 
 def carrier(request):
-    jobs = JobsPositions.objects.all().order_by('-id')
+    jobs = JobsPositions.objects.all().order_by('-created')
   
     today =  date.today()
     skills = Skills.objects.all()

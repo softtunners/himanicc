@@ -151,7 +151,7 @@ class SubcribeUsers(models.Model):
 class Skills(models.Model):
     skill_name=models.CharField(max_length=50)
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.skill_name
 
 class JobsPositions(models.Model):

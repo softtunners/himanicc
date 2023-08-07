@@ -8,10 +8,7 @@
 
 
 <style>
-    body{
-        font-family: montserrat !important;
-
-    }
+    
     .rotate-cardn-5 {
         transform: rotate(-5deg);
     }
@@ -103,7 +100,7 @@
                         <h2>Filter Skills</h2>
                         
                         <form action="{% url 'skillsearch1' %} " method="GET">
-                        <select class="bordered-element form-control custom-select text-muted" name='skill' data-msg="Please select country." style="border-color:#007bb6 !important">
+                        <select class=" form-control p-0 " name='skill' data-msg="Please select country." style="border-color:#007bb6 !important">
                                 <option selected value=""> -- Skills --</option>
                                 {% for skill in skills %}
                                 <option value="{{skill}}">{{skill}}</option>
@@ -129,7 +126,7 @@
             {% if job.expirydate > today %}
              <span style='color:green;'>Application Expiray Date : {{job.expirydate}}</span>
 
-                 <a class="card card-frame mb-3 job-card " href="{% url 'careerApp' job.id %}">
+                 <a class="card card-frame mb-3 job-card " href="{% url 'careerApp' job.id %}" target="_blank">
                      <div class="row align-items-sm-center " >
                          <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
                              {{job.job_title}}
@@ -150,7 +147,7 @@
             
             {% else %}
             <span style='color:red'>Application Closed: {{job.expirydate}}</span>
-            <a class="card card-frame mb-3 job-card " href="{% url 'contact' %}"  >
+            <a class="card card-frame mb-3 job-card " href="{% url 'contact' %}" target="_blank" >
                 <div class="row align-items-sm-center ">
                     <span class="col-sm-6 text-dark " id="title{{forloop.counter}}">
                        {{job.job_title}}
