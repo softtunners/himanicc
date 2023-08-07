@@ -38,9 +38,9 @@
         <p><a href="..">Go back</a></p>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="../pwstrength.js"></script>
-    <script type="text/javascript">
+    {% comment %} <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript" src="../pwstrength.js"></script> {% endcomment %}
+    {% comment %} <script type="text/javascript">
         jQuery(document).ready(function () {
             "use strict";
             var options = {};
@@ -55,6 +55,6 @@
             };
             $(':password').pwstrength(options);
         });
-    </script>
+    </script> {% endcomment %}
 </body>
 </html>
