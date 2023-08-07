@@ -174,20 +174,17 @@
                                                 Home
                                             </a>
                                         </li>
-                                        <li class="u-has-submenu">
-                                            <div class="hs-unfold" style=' margin: 10px 14px;'>
-                                                <a class="js-hs-unfold-invoker  dropdown-toggle " style=' color:#677788;  ' href="javascript:;" data-hs-unfold-options='{
-                                                   "target": "#basicDropdownClick2"
-                                                 }'>  Who We Are</a>
-                
-                                                <div id="basicDropdownClick2" style="transform: translate(20px, -30px)!important;  box-shadow: 4px 3px 6px 5px #00000042;" class="hs-unfold-content dropdown-menu">
-                                                    <a class="dropdown-item" href="{% url 'home'%}#frame-2">Our Services</a>
-                                                    <a class="dropdown-item" href="{% url 'home'%}#frame-5">Why Choose Us</a>
-                                                    <a class="dropdown-item" href="{% url 'home'%}#frame-6">Our Team</a>
-                                                </div>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Who We Are
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <a class="dropdown-item" href="{% url 'home'%}#frame-2">Our Services</a>
+                                                <a class="dropdown-item" href="{% url 'home'%}#frame-5">Why Choose Us</a>
+                                                <a class="dropdown-item" href="{% url 'home'%}#frame-6">Our Team</a>
                                             </div>
-
                                         </li>
+                                        
                                         <li class="u-has-submenu">
                                             <a class="nav-link {% if url_name == 'services' %}active-2{% endif %}" href="{% url 'services'%}">
                                                 What we do
@@ -301,6 +298,10 @@
             font-size: 18px;
         }
     }
+    .dropdown-toggle::after{
+        content: "";
+
+    }
 </style>
 
 
@@ -331,7 +332,7 @@
                
                 <div class="col-md-6 hide-tablet">
                     <ul class="list-unstyled  d-flex m-0 justify-content-around ">
-                        <li class="m-0">
+                        {% comment %} <li class="m-0">
                             <div class="hs-unfold">
                                 <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle text-white" href="javascript:;" data-hs-unfold-options='{
                                    "target": "#basicDropdownClick"
@@ -342,9 +343,17 @@
                                     <a class="dropdown-item " href="{% url 'home'%}#frame-4">What Our Client Says</a>
                                 </div>
                             </div>
-                        </li>
-
-                        <li class="m-0">
+                        </li> {% endcomment %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Home
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item " href="{% url 'home'%}#frame-3">Our Great Partners</a>
+                                    <a class="dropdown-item " href="{% url 'home'%}#frame-4">What Our Client Says</a>
+                            </div>
+                          </li>
+                        {% comment %} <li class="m-0">
                             <div class="hs-unfold">
                                 <a class="js-hs-unfold-invoker dropdown-nav-link dropdown-toggle text-white" href="javascript:;" data-hs-unfold-options='{
                                    "target": "#basicDropdownClick1"
@@ -356,24 +365,33 @@
                                     <a class="dropdown-item" href="{% url 'home'%}#frame-6">Our Team</a>
                                 </div>
                             </div>
+                        </li> {% endcomment %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Who We Are
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="{% url 'home'%}#frame-2">Our Services</a>
+                                <a class="dropdown-item" href="{% url 'home'%}#frame-5">Why Choose Us</a>
+                                <a class="dropdown-item" href="{% url 'home'%}#frame-6">Our Team</a>
+                            </div>
                         </li>
-
                       
-                        <li>
-                            <a class="text-white" href="{% url 'service'%}#frame-2">What We Do</a>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" style="    width: max-content;" href="{% url 'service'%}#frame-2">What We Do</a>
                         </li>
-                        <li>
-                            <a class="text-white" href="{% url 'scrapbook'%}">Scrapbook</a>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" style="    width: max-content;" href="{% url 'scrapbook'%}">Scrapbook</a>
                         </li>
-                        <li>
-                            <a class="text-white"  href="{% url 'blogs'%}">Blog</a>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" style="    width: max-content;"  href="{% url 'blogs'%}">Blog</a>
                         </li>
-                        <li>
-                            <a class="text-white"  href="{% url 'career'%}">Career</a>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" style="    width: max-content;"  href="{% url 'career'%}">Career</a>
                         </li>
                         
-                        <li >
-                            <a class="text-white" href="{% url 'contact' %}">
+                        <li class="nav-item">
+                            <a class="text-white nav-link" style="    width: max-content;" href="{% url 'contact' %}">
                                 Contact Us
                             </a>
                         </li>
